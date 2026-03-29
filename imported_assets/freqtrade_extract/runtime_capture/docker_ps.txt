@@ -1,0 +1,6 @@
+Observed relevant containers before the Docker daemon became unavailable:
+
+NAMES                STATUS       PORTS
+freqtrade-cn-ui      Up 3 hours   127.0.0.1:8899->80/tcp
+freqtrade-mode-api   Up 3 hours
+freqtrade            Up 31 hours  127.0.0.1:18888->8080/tcp
