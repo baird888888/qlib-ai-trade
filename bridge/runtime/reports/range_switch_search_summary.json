@@ -1,0 +1,3587 @@
+{
+  "generated_at": "2026-03-30T14:36:45.788063+00:00",
+  "symbols": [
+    "BTC-USDT",
+    "ETH-USDT",
+    "DOGE-USDT",
+    "PEPE-USDT"
+  ],
+  "search_trials": 4,
+  "search_method": "walk_forward_holdout",
+  "search_config": {
+    "test_start": "2019-07-13T18:35:00+00:00",
+    "test_end": "2026-03-29T18:35:00+00:00",
+    "search_end": "2025-03-29T18:34:59+00:00",
+    "holdout_start": "2025-03-29T18:35:00+00:00",
+    "holdout_days": 365,
+    "validation_window_days": 180,
+    "calibration_window_days": 365,
+    "fold_step_days": 180,
+    "refine_around_current_best": true,
+    "local_radius": 1,
+    "anchor_summary": "G:\\qlib-ai-trade\\bridge\\runtime\\reports\\live_strategy_search_summary.json",
+    "anchor_params_json": null,
+    "anchor_params_file": "bridge\\runtime\\reports\\range_best_anchor.json",
+    "fixed_params_json": null,
+    "fixed_params_file": "bridge\\runtime\\reports\\fixed_range.json",
+    "fold_count": 12,
+    "fold_windows": [
+      {
+        "calibration": [
+          "2018-07-13T18:35:00+00:00",
+          "2019-07-13T18:34:59+00:00"
+        ],
+        "evaluation": [
+          "2019-07-13T18:35:00+00:00",
+          "2020-01-09T18:34:59+00:00"
+        ]
+      },
+      {
+        "calibration": [
+          "2019-01-09T18:35:00+00:00",
+          "2020-01-09T18:34:59+00:00"
+        ],
+        "evaluation": [
+          "2020-01-09T18:35:00+00:00",
+          "2020-07-07T18:34:59+00:00"
+        ]
+      },
+      {
+        "calibration": [
+          "2019-07-08T18:35:00+00:00",
+          "2020-07-07T18:34:59+00:00"
+        ],
+        "evaluation": [
+          "2020-07-07T18:35:00+00:00",
+          "2021-01-03T18:34:59+00:00"
+        ]
+      },
+      {
+        "calibration": [
+          "2020-01-04T18:35:00+00:00",
+          "2021-01-03T18:34:59+00:00"
+        ],
+        "evaluation": [
+          "2021-01-03T18:35:00+00:00",
+          "2021-07-02T18:34:59+00:00"
+        ]
+      },
+      {
+        "calibration": [
+          "2020-07-02T18:35:00+00:00",
+          "2021-07-02T18:34:59+00:00"
+        ],
+        "evaluation": [
+          "2021-07-02T18:35:00+00:00",
+          "2021-12-29T18:34:59+00:00"
+        ]
+      },
+      {
+        "calibration": [
+          "2020-12-29T18:35:00+00:00",
+          "2021-12-29T18:34:59+00:00"
+        ],
+        "evaluation": [
+          "2021-12-29T18:35:00+00:00",
+          "2022-06-27T18:34:59+00:00"
+        ]
+      },
+      {
+        "calibration": [
+          "2021-06-27T18:35:00+00:00",
+          "2022-06-27T18:34:59+00:00"
+        ],
+        "evaluation": [
+          "2022-06-27T18:35:00+00:00",
+          "2022-12-24T18:34:59+00:00"
+        ]
+      },
+      {
+        "calibration": [
+          "2021-12-24T18:35:00+00:00",
+          "2022-12-24T18:34:59+00:00"
+        ],
+        "evaluation": [
+          "2022-12-24T18:35:00+00:00",
+          "2023-06-22T18:34:59+00:00"
+        ]
+      },
+      {
+        "calibration": [
+          "2022-06-22T18:35:00+00:00",
+          "2023-06-22T18:34:59+00:00"
+        ],
+        "evaluation": [
+          "2023-06-22T18:35:00+00:00",
+          "2023-12-19T18:34:59+00:00"
+        ]
+      },
+      {
+        "calibration": [
+          "2022-12-19T18:35:00+00:00",
+          "2023-12-19T18:34:59+00:00"
+        ],
+        "evaluation": [
+          "2023-12-19T18:35:00+00:00",
+          "2024-06-16T18:34:59+00:00"
+        ]
+      },
+      {
+        "calibration": [
+          "2023-06-17T18:35:00+00:00",
+          "2024-06-16T18:34:59+00:00"
+        ],
+        "evaluation": [
+          "2024-06-16T18:35:00+00:00",
+          "2024-12-13T18:34:59+00:00"
+        ]
+      },
+      {
+        "calibration": [
+          "2023-12-14T18:35:00+00:00",
+          "2024-12-13T18:34:59+00:00"
+        ],
+        "evaluation": [
+          "2024-12-13T18:35:00+00:00",
+          "2025-03-29T18:34:59+00:00"
+        ]
+      }
+    ]
+  },
+  "baseline_validation": {
+    "aggregate": {
+      "objective": 52.30247354198745,
+      "avg_ann_pct": 8.770388435259015,
+      "avg_cagr_pct": 8.770388435259015,
+      "worst_dd_pct": 1.7102656674087502,
+      "total_trades": 578,
+      "portfolio_return_ann_pct": 8.770388435259015,
+      "portfolio_cagr_pct": 8.770388435259015,
+      "portfolio_max_drawdown_pct": 1.7102656674087502,
+      "portfolio_trades": 578,
+      "positive_symbols": 4,
+      "avg_payoff_ratio": 2.64904951528805,
+      "folds": 12,
+      "positive_fold_ratio": 1.0,
+      "recent_return_ann_pct": 16.754221063641133,
+      "return_ann_std": 5.167963185484655,
+      "return_pct_std": 2.169261774357539,
+      "worst_fold_return_ann_pct": 1.121606244777211,
+      "avg_drawdown_pct": 0.8595498901480942,
+      "profitable_symbol_ratio": 1.0,
+      "avg_log_growth": 0.03826083786969118,
+      "log_growth_std": 0.02082951397821725,
+      "weekly_periods": 298,
+      "weekly_positive_ratio": 0.412751677852349,
+      "weekly_non_negative_ratio": 0.7348993288590604,
+      "weekly_avg_return_pct": 0.15507304328229715,
+      "weekly_median_return_pct": 0.0,
+      "weekly_std_return_pct": 0.422294214604183,
+      "weekly_worst_return_pct": -0.95256995611539,
+      "weekly_best_return_pct": 3.430624618324929,
+      "monthly_periods": 68,
+      "monthly_positive_ratio": 0.7794117647058824,
+      "monthly_non_negative_ratio": 0.7794117647058824,
+      "monthly_avg_return_pct": 0.683774772328919,
+      "monthly_median_return_pct": 0.40118489507540156,
+      "monthly_std_return_pct": 0.951059834259122,
+      "monthly_worst_return_pct": -0.6242203515430478,
+      "monthly_best_return_pct": 3.7657851487907124,
+      "yearly_periods": 6,
+      "yearly_positive_ratio": 1.0,
+      "yearly_non_negative_ratio": 1.0,
+      "yearly_avg_return_pct": 7.880774366810994,
+      "yearly_median_return_pct": 6.752877664517786,
+      "yearly_std_return_pct": 4.1559575552272285,
+      "yearly_worst_return_pct": 3.7822830592519674,
+      "yearly_best_return_pct": 16.067030582867538
+    },
+    "portfolio": {
+      "return_pct": 3.9227938962516142,
+      "return_ann_pct": 8.770388435259015,
+      "cagr_pct": 8.770388435259015,
+      "sharpe": 3.0399919624276346,
+      "sortino": 0.44091249975972885,
+      "calmar": 13.524952017552346,
+      "max_drawdown_pct": 1.7102656674087502,
+      "win_rate_pct": 60.77371724787847,
+      "payoff_ratio": 2.64904951528805,
+      "trades": 578,
+      "folds": 12,
+      "positive_fold_ratio": 1.0,
+      "weekly_periods": 298,
+      "weekly_positive_ratio": 0.412751677852349,
+      "weekly_non_negative_ratio": 0.7348993288590604,
+      "weekly_avg_return_pct": 0.15507304328229715,
+      "weekly_median_return_pct": 0.0,
+      "weekly_std_return_pct": 0.422294214604183,
+      "weekly_worst_return_pct": -0.95256995611539,
+      "weekly_best_return_pct": 3.430624618324929,
+      "monthly_periods": 68,
+      "monthly_positive_ratio": 0.7794117647058824,
+      "monthly_non_negative_ratio": 0.7794117647058824,
+      "monthly_avg_return_pct": 0.683774772328919,
+      "monthly_median_return_pct": 0.40118489507540156,
+      "monthly_std_return_pct": 0.951059834259122,
+      "monthly_worst_return_pct": -0.6242203515430478,
+      "monthly_best_return_pct": 3.7657851487907124,
+      "yearly_periods": 6,
+      "yearly_positive_ratio": 1.0,
+      "yearly_non_negative_ratio": 1.0,
+      "yearly_avg_return_pct": 7.880774366810994,
+      "yearly_median_return_pct": 6.752877664517786,
+      "yearly_std_return_pct": 4.1559575552272285,
+      "yearly_worst_return_pct": 3.7822830592519674,
+      "yearly_best_return_pct": 16.067030582867538
+    },
+    "rows": [
+      {
+        "symbol": "BTC-USDT",
+        "return_pct": 0.019980773313556712,
+        "return_ann_pct": 0.04038860414361153,
+        "cagr_pct": 0.04061483581898617,
+        "sharpe": -0.07694821493060054,
+        "sortino": -0.15611418814659703,
+        "calmar": 1.7401910269649694,
+        "max_drawdown_pct": 0.31453219776880204,
+        "win_rate_pct": 20.10822510822511,
+        "payoff_ratio": 0.23845596110593445,
+        "trades": 26,
+        "folds": 12,
+        "positive_folds": 3
+      },
+      {
+        "symbol": "DOGE-USDT",
+        "return_pct": 0.9541132812500001,
+        "return_ann_pct": 2.197098848614243,
+        "cagr_pct": 2.2120989451326216,
+        "sharpe": 0.7562868126972107,
+        "sortino": 6.54806061648149,
+        "calmar": 5.036173572019575,
+        "max_drawdown_pct": 1.6727452911371121,
+        "win_rate_pct": 42.61968614909791,
+        "payoff_ratio": 1.9900454841554165,
+        "trades": 223,
+        "folds": 12,
+        "positive_folds": 7
+      },
+      {
+        "symbol": "ETH-USDT",
+        "return_pct": 1.384271484375,
+        "return_ann_pct": 2.900619382960769,
+        "cagr_pct": 2.91788796165684,
+        "sharpe": 2.2937601639650596,
+        "sortino": 11.714911058626042,
+        "calmar": 13.80827445472058,
+        "max_drawdown_pct": 0.6872174959476451,
+        "win_rate_pct": 61.598823540580504,
+        "payoff_ratio": 3.3772298047939935,
+        "trades": 218,
+        "folds": 12,
+        "positive_folds": 12
+      },
+      {
+        "symbol": "PEPE-USDT",
+        "return_pct": 1.03325,
+        "return_ann_pct": 2.6104959203515445,
+        "cagr_pct": 2.629879809372099,
+        "sharpe": 1.0510079343749115,
+        "sortino": 6.843790925829805,
+        "calmar": 12.7598281839461,
+        "max_drawdown_pct": 0.8901299767932636,
+        "win_rate_pct": 24.43452380952381,
+        "payoff_ratio": 2.191157122453054,
+        "trades": 89,
+        "folds": 12,
+        "positive_folds": 5
+      }
+    ],
+    "stability": {
+      "weekly_periods": 298,
+      "weekly_positive_ratio": 0.412751677852349,
+      "weekly_non_negative_ratio": 0.7348993288590604,
+      "weekly_avg_return_pct": 0.15507304328229715,
+      "weekly_median_return_pct": 0.0,
+      "weekly_std_return_pct": 0.422294214604183,
+      "weekly_worst_return_pct": -0.95256995611539,
+      "weekly_best_return_pct": 3.430624618324929,
+      "monthly_periods": 68,
+      "monthly_positive_ratio": 0.7794117647058824,
+      "monthly_non_negative_ratio": 0.7794117647058824,
+      "monthly_avg_return_pct": 0.683774772328919,
+      "monthly_median_return_pct": 0.40118489507540156,
+      "monthly_std_return_pct": 0.951059834259122,
+      "monthly_worst_return_pct": -0.6242203515430478,
+      "monthly_best_return_pct": 3.7657851487907124,
+      "yearly_periods": 6,
+      "yearly_positive_ratio": 1.0,
+      "yearly_non_negative_ratio": 1.0,
+      "yearly_avg_return_pct": 7.880774366810994,
+      "yearly_median_return_pct": 6.752877664517786,
+      "yearly_std_return_pct": 4.1559575552272285,
+      "yearly_worst_return_pct": 3.7822830592519674,
+      "yearly_best_return_pct": 16.067030582867538
+    },
+    "folds": [
+      {
+        "fold": 1,
+        "window": {
+          "calibration": [
+            "2018-07-13T18:35:00+00:00",
+            "2019-07-13T18:34:59+00:00"
+          ],
+          "evaluation": [
+            "2019-07-13T18:35:00+00:00",
+            "2020-01-09T18:34:59+00:00"
+          ]
+        },
+        "portfolio": {
+          "return_pct": 0.88578111071973,
+          "return_ann_pct": 1.8056260363294747,
+          "cagr_pct": 1.8056260363294747,
+          "sharpe": 1.8443508990839634,
+          "sortino": 0.3046856373387734,
+          "calmar": 7.316294047003053,
+          "max_drawdown_pct": 0.24679517044139399,
+          "win_rate_pct": 58.82352941176471,
+          "payoff_ratio": 3.4627939585759795,
+          "trades": 17
+        },
+        "stability": {
+          "weekly_periods": 26,
+          "weekly_positive_ratio": 0.23076923076923078,
+          "weekly_non_negative_ratio": 0.8461538461538461,
+          "weekly_avg_return_pct": 0.034044117650649644,
+          "weekly_median_return_pct": 0.0,
+          "weekly_std_return_pct": 0.15517338518067347,
+          "weekly_worst_return_pct": -0.12457175121759478,
+          "weekly_best_return_pct": 0.765378344322909,
+          "monthly_periods": 6,
+          "monthly_positive_ratio": 0.5,
+          "monthly_non_negative_ratio": 0.5,
+          "monthly_avg_return_pct": 0.1686556329051403,
+          "monthly_median_return_pct": 0.012804573623442783,
+          "monthly_std_return_pct": 0.3909942378325699,
+          "monthly_worst_return_pct": -0.07486704813044476,
+          "monthly_best_return_pct": 1.0316377699284507,
+          "yearly_periods": 1,
+          "yearly_positive_ratio": 1.0,
+          "yearly_non_negative_ratio": 1.0,
+          "yearly_avg_return_pct": 0.04816500927569134,
+          "yearly_median_return_pct": 0.04816500927569134,
+          "yearly_std_return_pct": 0.0,
+          "yearly_worst_return_pct": 0.04816500927569134,
+          "yearly_best_return_pct": 0.04816500927569134
+        },
+        "rows": [
+          {
+            "symbol": "BTC-USDT",
+            "return_pct": -0.13221997924002063,
+            "return_ann_pct": -0.2664522595334451,
+            "cagr_pct": -0.26793572660174236,
+            "sharpe": -2.0026896721738723,
+            "sortino": -2.158795248251381,
+            "calmar": -1.2099807669546978,
+            "max_drawdown_pct": 0.2202119792400148,
+            "win_rate_pct": 28.57142857142857,
+            "payoff_ratio": 0.5989733402664315,
+            "trades": 7
+          },
+          {
+            "symbol": "ETH-USDT",
+            "return_pct": 1.1196484375,
+            "return_ann_pct": 2.270704896411857,
+            "cagr_pct": 2.2835074206798645,
+            "sharpe": 2.505281765329128,
+            "sortino": 20.54743842821348,
+            "calmar": 28.68262514065296,
+            "max_drawdown_pct": 0.07916656461104399,
+            "win_rate_pct": 80.0,
+            "payoff_ratio": 2.830064058303833,
+            "trades": 10
+          },
+          {
+            "symbol": "DOGE-USDT",
+            "return_pct": 0.0,
+            "return_ann_pct": 0.0,
+            "cagr_pct": 0.0,
+            "sharpe": NaN,
+            "sortino": NaN,
+            "calmar": NaN,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": NaN,
+            "payoff_ratio": 0.0,
+            "trades": 0
+          },
+          {
+            "symbol": "PEPE-USDT",
+            "return_pct": 0.0,
+            "return_ann_pct": 0.0,
+            "cagr_pct": 0.0,
+            "sharpe": 0.0,
+            "sortino": 0.0,
+            "calmar": 0.0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0.0,
+            "payoff_ratio": 0.0,
+            "trades": 0
+          }
+        ]
+      },
+      {
+        "fold": 2,
+        "window": {
+          "calibration": [
+            "2019-01-09T18:35:00+00:00",
+            "2020-01-09T18:34:59+00:00"
+          ],
+          "evaluation": [
+            "2020-01-09T18:35:00+00:00",
+            "2020-07-07T18:34:59+00:00"
+          ]
+        },
+        "portfolio": {
+          "return_pct": 0.5511682570978671,
+          "return_ann_pct": 1.121606244777211,
+          "cagr_pct": 1.121606244777211,
+          "sharpe": 0.6396139677066245,
+          "sortino": 0.04620917706600405,
+          "calmar": 1.0828765721088018,
+          "max_drawdown_pct": 1.035765546753853,
+          "win_rate_pct": 57.14285714285714,
+          "payoff_ratio": 1.1573874780115287,
+          "trades": 35
+        },
+        "stability": {
+          "weekly_periods": 26,
+          "weekly_positive_ratio": 0.34615384615384615,
+          "weekly_non_negative_ratio": 0.7307692307692307,
+          "weekly_avg_return_pct": 0.019519744201124976,
+          "weekly_median_return_pct": 0.0,
+          "weekly_std_return_pct": 0.18091607992721984,
+          "weekly_worst_return_pct": -0.5557410229432236,
+          "weekly_best_return_pct": 0.39785315006755084,
+          "monthly_periods": 6,
+          "monthly_positive_ratio": 0.6666666666666666,
+          "monthly_non_negative_ratio": 0.6666666666666666,
+          "monthly_avg_return_pct": 0.1190227796172431,
+          "monthly_median_return_pct": 0.1893072252656003,
+          "monthly_std_return_pct": 0.39310725757194903,
+          "monthly_worst_return_pct": -0.6242203515430589,
+          "monthly_best_return_pct": 0.6735378363637023,
+          "yearly_periods": 0,
+          "yearly_positive_ratio": 0.0,
+          "yearly_non_negative_ratio": 0.0,
+          "yearly_avg_return_pct": 0.0,
+          "yearly_median_return_pct": 0.0,
+          "yearly_std_return_pct": 0.0,
+          "yearly_worst_return_pct": 0.0,
+          "yearly_best_return_pct": 0.0
+        },
+        "rows": [
+          {
+            "symbol": "BTC-USDT",
+            "return_pct": 0.29757173538721693,
+            "return_ann_pct": 0.6009832398297554,
+            "cagr_pct": 0.6043437971319676,
+            "sharpe": 1.198293026500297,
+            "sortino": 1.8086295956763687,
+            "calmar": 2.0495132232927977,
+            "max_drawdown_pct": 0.2932321845985464,
+            "win_rate_pct": 72.72727272727273,
+            "payoff_ratio": 0.7395758413988573,
+            "trades": 11
+          },
+          {
+            "symbol": "ETH-USDT",
+            "return_pct": 0.73553125,
+            "return_ann_pct": 1.4887991602500428,
+            "cagr_pct": 1.4971609710808131,
+            "sharpe": 1.159705502862048,
+            "sortino": 2.4880248266701335,
+            "calmar": 2.3563290797205996,
+            "max_drawdown_pct": 0.6318298972173175,
+            "win_rate_pct": 50.0,
+            "payoff_ratio": 1.7445427179336548,
+            "trades": 18
+          },
+          {
+            "symbol": "DOGE-USDT",
+            "return_pct": -0.570453125,
+            "return_ann_pct": -1.1470258600576155,
+            "cagr_pct": -1.153383456144108,
+            "sharpe": -2.1965256798326998,
+            "sortino": -2.189761808246522,
+            "calmar": -1.805100537199385,
+            "max_drawdown_pct": 0.6354359972864598,
+            "win_rate_pct": 33.33333333333333,
+            "payoff_ratio": 0.2461850792169571,
+            "trades": 6
+          },
+          {
+            "symbol": "PEPE-USDT",
+            "return_pct": 0.0,
+            "return_ann_pct": 0.0,
+            "cagr_pct": 0.0,
+            "sharpe": 0.0,
+            "sortino": 0.0,
+            "calmar": 0.0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0.0,
+            "payoff_ratio": 0.0,
+            "trades": 0
+          }
+        ]
+      },
+      {
+        "fold": 3,
+        "window": {
+          "calibration": [
+            "2019-07-08T18:35:00+00:00",
+            "2020-07-07T18:34:59+00:00"
+          ],
+          "evaluation": [
+            "2020-07-07T18:35:00+00:00",
+            "2021-01-03T18:34:59+00:00"
+          ]
+        },
+        "portfolio": {
+          "return_pct": 3.5761524628335817,
+          "return_ann_pct": 7.390341297556965,
+          "cagr_pct": 7.390341297556965,
+          "sharpe": 2.9170304372436675,
+          "sortino": 0.35712113377829735,
+          "calmar": 10.66855220050854,
+          "max_drawdown_pct": 0.692722045002947,
+          "win_rate_pct": 58.730158730158735,
+          "payoff_ratio": 1.8756302853219486,
+          "trades": 63
+        },
+        "stability": {
+          "weekly_periods": 25,
+          "weekly_positive_ratio": 0.52,
+          "weekly_non_negative_ratio": 0.68,
+          "weekly_avg_return_pct": 0.15381185839058942,
+          "weekly_median_return_pct": 0.06842343280544227,
+          "weekly_std_return_pct": 0.2744950142605355,
+          "weekly_worst_return_pct": -0.20006726308740008,
+          "weekly_best_return_pct": 1.0753881040088231,
+          "monthly_periods": 6,
+          "monthly_positive_ratio": 0.6666666666666666,
+          "monthly_non_negative_ratio": 0.6666666666666666,
+          "monthly_avg_return_pct": 0.4376909690366452,
+          "monthly_median_return_pct": 0.41375030097530185,
+          "monthly_std_return_pct": 0.6188836723021462,
+          "monthly_worst_return_pct": -0.3530664094637648,
+          "monthly_best_return_pct": 1.5660316396846508,
+          "yearly_periods": 1,
+          "yearly_positive_ratio": 1.0,
+          "yearly_non_negative_ratio": 1.0,
+          "yearly_avg_return_pct": 0.39978953338983825,
+          "yearly_median_return_pct": 0.39978953338983825,
+          "yearly_std_return_pct": 0.0,
+          "yearly_worst_return_pct": 0.39978953338983825,
+          "yearly_best_return_pct": 0.39978953338983825
+        },
+        "rows": [
+          {
+            "symbol": "BTC-USDT",
+            "return_pct": 0.003932276415493106,
+            "return_ann_pct": 0.007929887178192985,
+            "cagr_pct": 0.00797409768937829,
+            "sharpe": 0.01903275384536629,
+            "sortino": 0.02816059913977305,
+            "calmar": 0.025211686544160658,
+            "max_drawdown_pct": 0.31453219776880204,
+            "win_rate_pct": 40.0,
+            "payoff_ratio": 1.5229223516059245,
+            "trades": 5
+          },
+          {
+            "symbol": "ETH-USDT",
+            "return_pct": 2.5353671875,
+            "return_ann_pct": 5.178654048278752,
+            "cagr_pct": 5.208263947305536,
+            "sharpe": 3.1945207970113962,
+            "sortino": 18.71470001876077,
+            "calmar": 15.13949119574726,
+            "max_drawdown_pct": 0.3420626216113165,
+            "win_rate_pct": 58.82352941176471,
+            "payoff_ratio": 3.213628053665161,
+            "trades": 34
+          },
+          {
+            "symbol": "DOGE-USDT",
+            "return_pct": 1.451453125,
+            "return_ann_pct": 2.94855903430693,
+            "cagr_pct": 2.9652384598754633,
+            "sharpe": 1.2252404057342396,
+            "sortino": 2.5055281293166813,
+            "calmar": 2.682881761938186,
+            "max_drawdown_pct": 1.0990268285907656,
+            "win_rate_pct": 45.45454545454545,
+            "payoff_ratio": 1.9700596332550049,
+            "trades": 22
+          },
+          {
+            "symbol": "PEPE-USDT",
+            "return_pct": 0.0,
+            "return_ann_pct": 0.0,
+            "cagr_pct": 0.0,
+            "sharpe": 0.0,
+            "sortino": 0.0,
+            "calmar": 0.0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0.0,
+            "payoff_ratio": 0.0,
+            "trades": 0
+          }
+        ]
+      },
+      {
+        "fold": 4,
+        "window": {
+          "calibration": [
+            "2020-01-04T18:35:00+00:00",
+            "2021-01-03T18:34:59+00:00"
+          ],
+          "evaluation": [
+            "2021-01-03T18:35:00+00:00",
+            "2021-07-02T18:34:59+00:00"
+          ]
+        },
+        "portfolio": {
+          "return_pct": 5.521973930714941,
+          "return_ann_pct": 11.52380075622463,
+          "cagr_pct": 11.52380075622463,
+          "sharpe": 2.9385370228452055,
+          "sortino": 0.4048748986252554,
+          "calmar": 6.738017944127076,
+          "max_drawdown_pct": 1.7102656674087502,
+          "win_rate_pct": 69.31818181818183,
+          "payoff_ratio": 0.990555417864731,
+          "trades": 88
+        },
+        "stability": {
+          "weekly_periods": 26,
+          "weekly_positive_ratio": 0.5384615384615384,
+          "weekly_non_negative_ratio": 0.6153846153846154,
+          "weekly_avg_return_pct": 0.20852132353037553,
+          "weekly_median_return_pct": 0.0420128839760725,
+          "weekly_std_return_pct": 0.563517788591276,
+          "weekly_worst_return_pct": -0.9525699561154011,
+          "weekly_best_return_pct": 1.5084890804421658,
+          "monthly_periods": 6,
+          "monthly_positive_ratio": 0.8333333333333334,
+          "monthly_non_negative_ratio": 1.0,
+          "monthly_avg_return_pct": 0.8539454080823535,
+          "monthly_median_return_pct": 0.5061304246096965,
+          "monthly_std_return_pct": 1.0347880426518585,
+          "monthly_worst_return_pct": 0.0,
+          "monthly_best_return_pct": 3.118171228644684,
+          "yearly_periods": 0,
+          "yearly_positive_ratio": 0.0,
+          "yearly_non_negative_ratio": 0.0,
+          "yearly_avg_return_pct": 0.0,
+          "yearly_median_return_pct": 0.0,
+          "yearly_std_return_pct": 0.0,
+          "yearly_worst_return_pct": 0.0,
+          "yearly_best_return_pct": 0.0
+        },
+        "rows": [
+          {
+            "symbol": "BTC-USDT",
+            "return_pct": 0.0,
+            "return_ann_pct": 0.0,
+            "cagr_pct": 0.0,
+            "sharpe": NaN,
+            "sortino": NaN,
+            "calmar": NaN,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": NaN,
+            "payoff_ratio": 0.0,
+            "trades": 0
+          },
+          {
+            "symbol": "ETH-USDT",
+            "return_pct": 3.5132734375,
+            "return_ann_pct": 7.211318855391191,
+            "cagr_pct": 7.252945634566865,
+            "sharpe": 3.9377426586400537,
+            "sortino": 9.691120908795119,
+            "calmar": 10.493503000017592,
+            "max_drawdown_pct": 0.6872174959476451,
+            "win_rate_pct": 64.70588235294117,
+            "payoff_ratio": 1.4338624477386475,
+            "trades": 51
+          },
+          {
+            "symbol": "DOGE-USDT",
+            "return_pct": 0.9700390624999999,
+            "return_ann_pct": 1.9658016307830373,
+            "cagr_pct": 1.9768685030354005,
+            "sharpe": 0.7836156360564587,
+            "sortino": 1.258481841846429,
+            "calmar": 1.4430539256772517,
+            "max_drawdown_pct": 1.3622509843909336,
+            "win_rate_pct": 56.666666666666664,
+            "payoff_ratio": 0.9650478959083557,
+            "trades": 30
+          },
+          {
+            "symbol": "PEPE-USDT",
+            "return_pct": 0.0,
+            "return_ann_pct": 0.0,
+            "cagr_pct": 0.0,
+            "sharpe": 0.0,
+            "sortino": 0.0,
+            "calmar": 0.0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0.0,
+            "payoff_ratio": 0.0,
+            "trades": 0
+          }
+        ]
+      },
+      {
+        "fold": 5,
+        "window": {
+          "calibration": [
+            "2020-07-02T18:35:00+00:00",
+            "2021-07-02T18:34:59+00:00"
+          ],
+          "evaluation": [
+            "2021-07-02T18:35:00+00:00",
+            "2021-12-29T18:34:59+00:00"
+          ]
+        },
+        "portfolio": {
+          "return_pct": 3.5775935044644935,
+          "return_ann_pct": 7.393373171792139,
+          "cagr_pct": 7.393373171792139,
+          "sharpe": 3.014394076214979,
+          "sortino": 0.3606545175761657,
+          "calmar": 9.567135826428354,
+          "max_drawdown_pct": 0.7727885655567479,
+          "win_rate_pct": 60.3448275862069,
+          "payoff_ratio": 1.8334221581432104,
+          "trades": 58
+        },
+        "stability": {
+          "weekly_periods": 26,
+          "weekly_positive_ratio": 0.5769230769230769,
+          "weekly_non_negative_ratio": 0.7307692307692307,
+          "weekly_avg_return_pct": 0.13566950756680207,
+          "weekly_median_return_pct": 0.027815279810616822,
+          "weekly_std_return_pct": 0.2769164961850057,
+          "weekly_worst_return_pct": -0.51242314838289,
+          "weekly_best_return_pct": 0.7163354736686944,
+          "monthly_periods": 5,
+          "monthly_positive_ratio": 0.8,
+          "monthly_non_negative_ratio": 0.8,
+          "monthly_avg_return_pct": 0.557655345695447,
+          "monthly_median_return_pct": 0.4570078341266326,
+          "monthly_std_return_pct": 0.8333915640773866,
+          "monthly_worst_return_pct": -0.6101509290054485,
+          "monthly_best_return_pct": 1.7177552869678259,
+          "yearly_periods": 0,
+          "yearly_positive_ratio": 0.0,
+          "yearly_non_negative_ratio": 0.0,
+          "yearly_avg_return_pct": 0.0,
+          "yearly_median_return_pct": 0.0,
+          "yearly_std_return_pct": 0.0,
+          "yearly_worst_return_pct": 0.0,
+          "yearly_best_return_pct": 0.0
+        },
+        "rows": [
+          {
+            "symbol": "BTC-USDT",
+            "return_pct": 0.0,
+            "return_ann_pct": 0.0,
+            "cagr_pct": 0.0,
+            "sharpe": NaN,
+            "sortino": NaN,
+            "calmar": NaN,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": NaN,
+            "payoff_ratio": 0.0,
+            "trades": 0
+          },
+          {
+            "symbol": "ETH-USDT",
+            "return_pct": 1.985953125,
+            "return_ann_pct": 4.045253084752964,
+            "cagr_pct": 4.06825783972582,
+            "sharpe": 3.324977390141836,
+            "sortino": 16.355646902706795,
+            "calmar": 21.960261675991354,
+            "max_drawdown_pct": 0.18420787258539573,
+            "win_rate_pct": 58.333333333333336,
+            "payoff_ratio": 3.6709487438201904,
+            "trades": 24
+          },
+          {
+            "symbol": "DOGE-USDT",
+            "return_pct": 2.428671875,
+            "return_ann_pct": 4.958065081953134,
+            "cagr_pct": 4.986384059439941,
+            "sharpe": 1.9601021537499368,
+            "sortino": 5.373415331760397,
+            "calmar": 4.676006071209705,
+            "max_drawdown_pct": 1.0603204971182723,
+            "win_rate_pct": 53.333333333333336,
+            "payoff_ratio": 1.9738125801086426,
+            "trades": 30
+          },
+          {
+            "symbol": "PEPE-USDT",
+            "return_pct": 0.0,
+            "return_ann_pct": 0.0,
+            "cagr_pct": 0.0,
+            "sharpe": 0.0,
+            "sortino": 0.0,
+            "calmar": 0.0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0.0,
+            "payoff_ratio": 0.0,
+            "trades": 0
+          }
+        ]
+      },
+      {
+        "fold": 6,
+        "window": {
+          "calibration": [
+            "2020-12-29T18:35:00+00:00",
+            "2021-12-29T18:34:59+00:00"
+          ],
+          "evaluation": [
+            "2021-12-29T18:35:00+00:00",
+            "2022-06-27T18:34:59+00:00"
+          ]
+        },
+        "portfolio": {
+          "return_pct": 2.381634524269516,
+          "return_ann_pct": 4.892071201066579,
+          "cagr_pct": 4.892071201066579,
+          "sharpe": 2.9409072940914402,
+          "sortino": 0.32214133036353965,
+          "calmar": 10.283138366607783,
+          "max_drawdown_pct": 0.4757371754281259,
+          "win_rate_pct": 61.53846153846154,
+          "payoff_ratio": 2.6492903245514765,
+          "trades": 26
+        },
+        "stability": {
+          "weekly_periods": 26,
+          "weekly_positive_ratio": 0.34615384615384615,
+          "weekly_non_negative_ratio": 0.8076923076923077,
+          "weekly_avg_return_pct": 0.09090607830999908,
+          "weekly_median_return_pct": 0.0,
+          "weekly_std_return_pct": 0.26024717718738494,
+          "weekly_worst_return_pct": -0.4561932676988678,
+          "weekly_best_return_pct": 0.893247284846721,
+          "monthly_periods": 6,
+          "monthly_positive_ratio": 1.0,
+          "monthly_non_negative_ratio": 1.0,
+          "monthly_avg_return_pct": 0.3936034109763509,
+          "monthly_median_return_pct": 0.2945728265876135,
+          "monthly_std_return_pct": 0.33188954932782483,
+          "monthly_worst_return_pct": 0.04533013879530756,
+          "monthly_best_return_pct": 1.0961299586748074,
+          "yearly_periods": 1,
+          "yearly_positive_ratio": 1.0,
+          "yearly_non_negative_ratio": 1.0,
+          "yearly_avg_return_pct": 2.381634524269516,
+          "yearly_median_return_pct": 2.381634524269516,
+          "yearly_std_return_pct": 0.0,
+          "yearly_worst_return_pct": 2.381634524269516,
+          "yearly_best_return_pct": 2.381634524269516
+        },
+        "rows": [
+          {
+            "symbol": "BTC-USDT",
+            "return_pct": 0.0,
+            "return_ann_pct": 0.0,
+            "cagr_pct": 0.0,
+            "sharpe": NaN,
+            "sortino": NaN,
+            "calmar": NaN,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": NaN,
+            "payoff_ratio": 0.0,
+            "trades": 0
+          },
+          {
+            "symbol": "ETH-USDT",
+            "return_pct": 1.3242578125,
+            "return_ann_pct": 2.6884409492124117,
+            "cagr_pct": 2.7036296941906457,
+            "sharpe": 2.5636816771935624,
+            "sortino": 30.174127496919414,
+            "calmar": 12.82550738836188,
+            "max_drawdown_pct": 0.20961673232919864,
+            "win_rate_pct": 72.72727272727273,
+            "payoff_ratio": 5.01755952835083,
+            "trades": 11
+          },
+          {
+            "symbol": "DOGE-USDT",
+            "return_pct": -0.0443671875,
+            "return_ann_pct": -0.08944956622979339,
+            "cagr_pct": -0.08994801903313698,
+            "sharpe": -0.0813125294499091,
+            "sortino": -0.12098304284880786,
+            "calmar": -0.11257203686070011,
+            "max_drawdown_pct": 0.7945984520159377,
+            "win_rate_pct": 33.33333333333333,
+            "payoff_ratio": 1.9208096265792847,
+            "trades": 12
+          },
+          {
+            "symbol": "PEPE-USDT",
+            "return_pct": 0.0,
+            "return_ann_pct": 0.0,
+            "cagr_pct": 0.0,
+            "sharpe": 0.0,
+            "sortino": 0.0,
+            "calmar": 0.0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0.0,
+            "payoff_ratio": 0.0,
+            "trades": 0
+          }
+        ]
+      },
+      {
+        "fold": 7,
+        "window": {
+          "calibration": [
+            "2021-06-27T18:35:00+00:00",
+            "2022-06-27T18:34:59+00:00"
+          ],
+          "evaluation": [
+            "2022-06-27T18:35:00+00:00",
+            "2022-12-24T18:34:59+00:00"
+          ]
+        },
+        "portfolio": {
+          "return_pct": 3.9179528142271547,
+          "return_ann_pct": 8.110686985567359,
+          "cagr_pct": 8.110686985567359,
+          "sharpe": 3.100743229742092,
+          "sortino": 0.43330330442155135,
+          "calmar": 13.786843361763417,
+          "max_drawdown_pct": 0.5882918063798148,
+          "win_rate_pct": 61.53846153846154,
+          "payoff_ratio": 2.4290481543137648,
+          "trades": 52
+        },
+        "stability": {
+          "weekly_periods": 25,
+          "weekly_positive_ratio": 0.48,
+          "weekly_non_negative_ratio": 0.72,
+          "weekly_avg_return_pct": 0.1543889501277036,
+          "weekly_median_return_pct": 0.0,
+          "weekly_std_return_pct": 0.3308098874564129,
+          "weekly_worst_return_pct": -0.3536655770417507,
+          "weekly_best_return_pct": 1.0228792755988536,
+          "monthly_periods": 6,
+          "monthly_positive_ratio": 0.8333333333333334,
+          "monthly_non_negative_ratio": 0.8333333333333334,
+          "monthly_avg_return_pct": 0.645002210699038,
+          "monthly_median_return_pct": 0.5639732717670265,
+          "monthly_std_return_pct": 0.6986687209494974,
+          "monthly_worst_return_pct": -0.3536655770417507,
+          "monthly_best_return_pct": 1.8306215684786853,
+          "yearly_periods": 0,
+          "yearly_positive_ratio": 0.0,
+          "yearly_non_negative_ratio": 0.0,
+          "yearly_avg_return_pct": 0.0,
+          "yearly_median_return_pct": 0.0,
+          "yearly_std_return_pct": 0.0,
+          "yearly_worst_return_pct": 0.0,
+          "yearly_best_return_pct": 0.0
+        },
+        "rows": [
+          {
+            "symbol": "BTC-USDT",
+            "return_pct": -0.0079031796700001,
+            "return_ann_pct": -0.01593671104961336,
+            "cagr_pct": -0.01602555035059572,
+            "sharpe": -1.5524810118048187,
+            "sortino": -1.5513652043239254,
+            "calmar": -0.22861828431670442,
+            "max_drawdown_pct": 0.06970882095999054,
+            "win_rate_pct": 0.0,
+            "payoff_ratio": 0.0,
+            "trades": 2
+          },
+          {
+            "symbol": "ETH-USDT",
+            "return_pct": 1.1040703125,
+            "return_ann_pct": 2.2389353390876776,
+            "cagr_pct": 2.251556778051378,
+            "sharpe": 1.9578375445022962,
+            "sortino": 5.9285276087848775,
+            "calmar": 8.536308775935622,
+            "max_drawdown_pct": 0.2622837807132017,
+            "win_rate_pct": 52.38095238095239,
+            "payoff_ratio": 2.8058652877807617,
+            "trades": 21
+          },
+          {
+            "symbol": "DOGE-USDT",
+            "return_pct": 1.9509609375,
+            "return_ann_pct": 3.973276448251295,
+            "cagr_pct": 3.9958640734772954,
+            "sharpe": 2.0338510454353984,
+            "sortino": 5.012083828295642,
+            "calmar": 3.7663680236026305,
+            "max_drawdown_pct": 1.054935795799039,
+            "win_rate_pct": 50.0,
+            "payoff_ratio": 2.033026933670044,
+            "trades": 28
+          },
+          {
+            "symbol": "PEPE-USDT",
+            "return_pct": 0.0,
+            "return_ann_pct": 0.0,
+            "cagr_pct": 0.0,
+            "sharpe": 0.0,
+            "sortino": 0.0,
+            "calmar": 0.0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0.0,
+            "payoff_ratio": 0.0,
+            "trades": 0
+          }
+        ]
+      },
+      {
+        "fold": 8,
+        "window": {
+          "calibration": [
+            "2021-12-24T18:35:00+00:00",
+            "2022-12-24T18:34:59+00:00"
+          ],
+          "evaluation": [
+            "2022-12-24T18:35:00+00:00",
+            "2023-06-22T18:34:59+00:00"
+          ]
+        },
+        "portfolio": {
+          "return_pct": 2.173179990865637,
+          "return_ann_pct": 4.459156057050826,
+          "cagr_pct": 4.459156057050826,
+          "sharpe": 1.9315224206982415,
+          "sortino": 0.36296997308532436,
+          "calmar": 9.646112096745501,
+          "max_drawdown_pct": 0.46227495723953904,
+          "win_rate_pct": 50.0,
+          "payoff_ratio": 4.990051828164122,
+          "trades": 20
+        },
+        "stability": {
+          "weekly_periods": 26,
+          "weekly_positive_ratio": 0.19230769230769232,
+          "weekly_non_negative_ratio": 0.8076923076923077,
+          "weekly_avg_return_pct": 0.08322745109362852,
+          "weekly_median_return_pct": 0.0,
+          "weekly_std_return_pct": 0.3190503434448594,
+          "weekly_worst_return_pct": -0.1736462252589943,
+          "weekly_best_return_pct": 1.515806774052586,
+          "monthly_periods": 6,
+          "monthly_positive_ratio": 0.6666666666666666,
+          "monthly_non_negative_ratio": 0.6666666666666666,
+          "monthly_avg_return_pct": 0.3605438849072551,
+          "monthly_median_return_pct": 0.08652538127053022,
+          "monthly_std_return_pct": 0.5651771348787683,
+          "monthly_worst_return_pct": -0.10537835613593227,
+          "monthly_best_return_pct": 1.515806774052586,
+          "yearly_periods": 1,
+          "yearly_positive_ratio": 1.0,
+          "yearly_non_negative_ratio": 1.0,
+          "yearly_avg_return_pct": 2.173179990865637,
+          "yearly_median_return_pct": 2.173179990865637,
+          "yearly_std_return_pct": 0.0,
+          "yearly_worst_return_pct": 2.173179990865637,
+          "yearly_best_return_pct": 2.173179990865637
+        },
+        "rows": [
+          {
+            "symbol": "BTC-USDT",
+            "return_pct": 0.07838842686999123,
+            "return_ann_pct": 0.15813909329844833,
+            "cagr_pct": 0.15902141195882624,
+            "sharpe": 1.4144663244658213,
+            "sortino": Infinity,
+            "calmar": 20.246166465014078,
+            "max_drawdown_pct": 0.007810816609243876,
+            "win_rate_pct": 100.0,
+            "payoff_ratio": 0.0,
+            "trades": 1
+          },
+          {
+            "symbol": "ETH-USDT",
+            "return_pct": 1.271578125,
+            "return_ann_pct": 2.5808066159040743,
+            "cagr_pct": 2.5953796118408423,
+            "sharpe": 2.457076788185147,
+            "sortino": Infinity,
+            "calmar": 10.035062627885074,
+            "max_drawdown_pct": 0.25717892469675485,
+            "win_rate_pct": 66.66666666666666,
+            "payoff_ratio": 7.3978681564331055,
+            "trades": 6
+          },
+          {
+            "symbol": "DOGE-USDT",
+            "return_pct": -0.1193359375,
+            "return_ann_pct": -0.24050384885867526,
+            "cagr_pct": -0.24184302394947288,
+            "sharpe": -0.28057794554223764,
+            "sortino": -0.4769522200888608,
+            "calmar": -0.46811977515754843,
+            "max_drawdown_pct": 0.5137656249999956,
+            "win_rate_pct": 27.27272727272727,
+            "payoff_ratio": 2.249950647354126,
+            "trades": 11
+          },
+          {
+            "symbol": "PEPE-USDT",
+            "return_pct": 0.951328125,
+            "return_ann_pct": 6.7379223281360145,
+            "cagr_pct": 6.818206831146556,
+            "sharpe": 2.352849132364962,
+            "sortino": 43.87790044868391,
+            "calmar": 116.24936756994097,
+            "max_drawdown_pct": 0.0579609375000012,
+            "win_rate_pct": 50.0,
+            "payoff_ratio": 17.413545608520508,
+            "trades": 2
+          }
+        ]
+      },
+      {
+        "fold": 9,
+        "window": {
+          "calibration": [
+            "2022-06-22T18:35:00+00:00",
+            "2023-06-22T18:34:59+00:00"
+          ],
+          "evaluation": [
+            "2023-06-22T18:35:00+00:00",
+            "2023-12-19T18:34:59+00:00"
+          ]
+        },
+        "portfolio": {
+          "return_pct": 4.95645870130248,
+          "return_ann_pct": 10.31432898016659,
+          "cagr_pct": 10.31432898016659,
+          "sharpe": 3.1451614766618934,
+          "sortino": 0.4483809671008675,
+          "calmar": 8.11637659643664,
+          "max_drawdown_pct": 1.2708046327834177,
+          "win_rate_pct": 57.446808510638306,
+          "payoff_ratio": 2.4053683342521444,
+          "trades": 47
+        },
+        "stability": {
+          "weekly_periods": 26,
+          "weekly_positive_ratio": 0.38461538461538464,
+          "weekly_non_negative_ratio": 0.7307692307692307,
+          "weekly_avg_return_pct": 0.18698791053107275,
+          "weekly_median_return_pct": 0.0,
+          "weekly_std_return_pct": 0.38986091536340955,
+          "weekly_worst_return_pct": -0.2333883361182787,
+          "weekly_best_return_pct": 1.4147940033156559,
+          "monthly_periods": 6,
+          "monthly_positive_ratio": 0.6666666666666666,
+          "monthly_non_negative_ratio": 0.6666666666666666,
+          "monthly_avg_return_pct": 0.697161916187868,
+          "monthly_median_return_pct": 0.369234504248217,
+          "monthly_std_return_pct": 0.9698230583156378,
+          "monthly_worst_return_pct": -0.3169471091923226,
+          "monthly_best_return_pct": 2.243840462462776,
+          "yearly_periods": 0,
+          "yearly_positive_ratio": 0.0,
+          "yearly_non_negative_ratio": 0.0,
+          "yearly_avg_return_pct": 0.0,
+          "yearly_median_return_pct": 0.0,
+          "yearly_std_return_pct": 0.0,
+          "yearly_worst_return_pct": 0.0,
+          "yearly_best_return_pct": 0.0
+        },
+        "rows": [
+          {
+            "symbol": "BTC-USDT",
+            "return_pct": 0.0,
+            "return_ann_pct": 0.0,
+            "cagr_pct": 0.0,
+            "sharpe": NaN,
+            "sortino": NaN,
+            "calmar": NaN,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": NaN,
+            "payoff_ratio": 0.0,
+            "trades": 0
+          },
+          {
+            "symbol": "ETH-USDT",
+            "return_pct": 0.1116953125,
+            "return_ann_pct": 0.2253698066030818,
+            "cagr_pct": 0.22662765536722862,
+            "sharpe": 0.4485736208142633,
+            "sortino": 0.904459321215985,
+            "calmar": 0.8694955528158941,
+            "max_drawdown_pct": 0.25919604289316167,
+            "win_rate_pct": 60.0,
+            "payoff_ratio": 0.9669716954231262,
+            "trades": 5
+          },
+          {
+            "symbol": "DOGE-USDT",
+            "return_pct": 1.1655234375,
+            "return_ann_pct": 2.3642898867731743,
+            "cagr_pct": 2.3776261635169327,
+            "sharpe": 1.2800062390517608,
+            "sortino": 2.9836207565799433,
+            "calmar": 3.3016187864608084,
+            "max_drawdown_pct": 0.7161002040782516,
+            "win_rate_pct": 47.61904761904761,
+            "payoff_ratio": 1.9837806224822998,
+            "trades": 21
+          },
+          {
+            "symbol": "PEPE-USDT",
+            "return_pct": 2.80571875,
+            "return_ann_pct": 5.738642079453671,
+            "cagr_pct": 5.771540757027971,
+            "sharpe": 2.2077641267917083,
+            "sortino": 7.2179474970104245,
+            "calmar": 9.374989558970194,
+            "max_drawdown_pct": 0.6121225035352507,
+            "win_rate_pct": 52.38095238095239,
+            "payoff_ratio": 2.512199878692627,
+            "trades": 21
+          }
+        ]
+      },
+      {
+        "fold": 10,
+        "window": {
+          "calibration": [
+            "2022-12-19T18:35:00+00:00",
+            "2023-12-19T18:34:59+00:00"
+          ],
+          "evaluation": [
+            "2023-12-19T18:35:00+00:00",
+            "2024-06-16T18:34:59+00:00"
+          ]
+        },
+        "portfolio": {
+          "return_pct": 8.173476039047767,
+          "return_ann_pct": 17.283818241377677,
+          "cagr_pct": 17.283818241377677,
+          "sharpe": 3.6791538176635727,
+          "sortino": 0.6850317981934402,
+          "calmar": 13.598856861827015,
+          "max_drawdown_pct": 1.2709758192907095,
+          "win_rate_pct": 57.57575757575758,
+          "payoff_ratio": 2.624444803206892,
+          "trades": 66
+        },
+        "stability": {
+          "weekly_periods": 25,
+          "weekly_positive_ratio": 0.48,
+          "weekly_non_negative_ratio": 0.64,
+          "weekly_avg_return_pct": 0.3222213217295793,
+          "weekly_median_return_pct": 0.0,
+          "weekly_std_return_pct": 0.7621807907356664,
+          "weekly_worst_return_pct": -0.2495412493665361,
+          "weekly_best_return_pct": 3.430624618324929,
+          "monthly_periods": 6,
+          "monthly_positive_ratio": 0.8333333333333334,
+          "monthly_non_negative_ratio": 1.0,
+          "monthly_avg_return_pct": 1.3463544276767696,
+          "monthly_median_return_pct": 0.9466979382305452,
+          "monthly_std_return_pct": 1.3313787228162015,
+          "monthly_worst_return_pct": 0.0,
+          "monthly_best_return_pct": 3.7358567474936155,
+          "yearly_periods": 1,
+          "yearly_positive_ratio": 1.0,
+          "yearly_non_negative_ratio": 1.0,
+          "yearly_avg_return_pct": 8.299203559569147,
+          "yearly_median_return_pct": 8.299203559569147,
+          "yearly_std_return_pct": 0.0,
+          "yearly_worst_return_pct": 8.299203559569147,
+          "yearly_best_return_pct": 8.299203559569147
+        },
+        "rows": [
+          {
+            "symbol": "BTC-USDT",
+            "return_pct": 0.0,
+            "return_ann_pct": 0.0,
+            "cagr_pct": 0.0,
+            "sharpe": NaN,
+            "sortino": NaN,
+            "calmar": NaN,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": NaN,
+            "payoff_ratio": 0.0,
+            "trades": 0
+          },
+          {
+            "symbol": "ETH-USDT",
+            "return_pct": 1.0759140625,
+            "return_ann_pct": 2.181526957842772,
+            "cagr_pct": 2.1938213115597405,
+            "sharpe": 1.889802732976309,
+            "sortino": 6.780762691076857,
+            "calmar": 6.544233152895322,
+            "max_drawdown_pct": 0.33335104463348975,
+            "win_rate_pct": 52.63157894736842,
+            "payoff_ratio": 2.37420654296875,
+            "trades": 19
+          },
+          {
+            "symbol": "DOGE-USDT",
+            "return_pct": -0.726953125,
+            "return_ann_pct": -1.4605386951259125,
+            "cagr_pct": -1.4686210452223292,
+            "sharpe": -1.2787119151893398,
+            "sortino": -1.712575677363994,
+            "calmar": -0.8731387276140864,
+            "max_drawdown_pct": 1.6727452911371121,
+            "win_rate_pct": 35.294117647058826,
+            "payoff_ratio": 1.2133066654205322,
+            "trades": 17
+          },
+          {
+            "symbol": "PEPE-USDT",
+            "return_pct": 5.07715625,
+            "return_ann_pct": 10.502756807215796,
+            "cagr_pct": 10.564298796279449,
+            "sharpe": 2.477989871233046,
+            "sortino": 11.414443537364916,
+            "calmar": 11.799127184832587,
+            "max_drawdown_pct": 0.8901299767932636,
+            "win_rate_pct": 53.333333333333336,
+            "payoff_ratio": 2.768172264099121,
+            "trades": 30
+          }
+        ]
+      },
+      {
+        "fold": 11,
+        "window": {
+          "calibration": [
+            "2023-06-17T18:35:00+00:00",
+            "2024-06-16T18:34:59+00:00"
+          ],
+          "evaluation": [
+            "2024-06-16T18:35:00+00:00",
+            "2024-12-13T18:34:59+00:00"
+          ]
+        },
+        "portfolio": {
+          "return_pct": 6.760322714939271,
+          "return_ann_pct": 14.195631187557595,
+          "cagr_pct": 14.195631187557595,
+          "sharpe": 3.759837506120403,
+          "sortino": 0.47595994533661534,
+          "calmar": 9.347911990878279,
+          "max_drawdown_pct": 1.518588450705327,
+          "win_rate_pct": 54.21686746987952,
+          "payoff_ratio": 2.477595839938721,
+          "trades": 83
+        },
+        "stability": {
+          "weekly_periods": 26,
+          "weekly_positive_ratio": 0.34615384615384615,
+          "weekly_non_negative_ratio": 0.6923076923076923,
+          "weekly_avg_return_pct": 0.2536863401012715,
+          "weekly_median_return_pct": 0.0,
+          "weekly_std_return_pct": 0.5966116766513714,
+          "weekly_worst_return_pct": -0.52225468192445,
+          "weekly_best_return_pct": 1.582575587688373,
+          "monthly_periods": 6,
+          "monthly_positive_ratio": 0.8333333333333334,
+          "monthly_non_negative_ratio": 0.8333333333333334,
+          "monthly_avg_return_pct": 1.1114052724368568,
+          "monthly_median_return_pct": 0.5513490702175328,
+          "monthly_std_return_pct": 1.4513764137786012,
+          "monthly_worst_return_pct": -0.5799674312828351,
+          "monthly_best_return_pct": 3.7657851487907124,
+          "yearly_periods": 0,
+          "yearly_positive_ratio": 0.0,
+          "yearly_non_negative_ratio": 0.0,
+          "yearly_avg_return_pct": 0.0,
+          "yearly_median_return_pct": 0.0,
+          "yearly_std_return_pct": 0.0,
+          "yearly_worst_return_pct": 0.0,
+          "yearly_best_return_pct": 0.0
+        },
+        "rows": [
+          {
+            "symbol": "BTC-USDT",
+            "return_pct": 0.0,
+            "return_ann_pct": 0.0,
+            "cagr_pct": 0.0,
+            "sharpe": NaN,
+            "sortino": NaN,
+            "calmar": NaN,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": NaN,
+            "payoff_ratio": 0.0,
+            "trades": 0
+          },
+          {
+            "symbol": "ETH-USDT",
+            "return_pct": 1.14121875,
+            "return_ann_pct": 2.314702954709924,
+            "cagr_pct": 2.327756357652233,
+            "sharpe": 1.8577017455705755,
+            "sortino": 5.342269743862819,
+            "calmar": 4.367170941775389,
+            "max_drawdown_pct": 0.5300234375000046,
+            "win_rate_pct": 56.25,
+            "payoff_ratio": 2.223653793334961,
+            "trades": 16
+          },
+          {
+            "symbol": "DOGE-USDT",
+            "return_pct": 2.8913203125,
+            "return_ann_pct": 5.91626385370434,
+            "cagr_pct": 5.950209172417442,
+            "sharpe": 1.4589056059044234,
+            "sortino": 3.9625222734376706,
+            "calmar": 6.698118486907093,
+            "max_drawdown_pct": 0.8832724988769525,
+            "win_rate_pct": 51.35135135135135,
+            "payoff_ratio": 2.171062707901001,
+            "trades": 37
+          },
+          {
+            "symbol": "PEPE-USDT",
+            "return_pct": 2.8094140625,
+            "return_ann_pct": 5.746306685726688,
+            "cagr_pct": 5.77925049267991,
+            "sharpe": 2.1340373391578793,
+            "sortino": 6.079613682675072,
+            "calmar": 7.8475493270137475,
+            "max_drawdown_pct": 0.7322421874999985,
+            "win_rate_pct": 50.0,
+            "payoff_ratio": 2.422247886657715,
+            "trades": 28
+          }
+        ]
+      },
+      {
+        "fold": 12,
+        "window": {
+          "calibration": [
+            "2023-12-14T18:35:00+00:00",
+            "2024-12-13T18:34:59+00:00"
+          ],
+          "evaluation": [
+            "2024-12-13T18:35:00+00:00",
+            "2025-03-29T18:34:59+00:00"
+          ]
+        },
+        "portfolio": {
+          "return_pct": 4.5978327045369305,
+          "return_ann_pct": 16.754221063641133,
+          "cagr_pct": 16.754221063641133,
+          "sharpe": 6.568651401059536,
+          "sortino": 1.0896173142309111,
+          "calmar": 62.14730834619371,
+          "max_drawdown_pct": 0.2695888447865058,
+          "win_rate_pct": 82.6086956521739,
+          "payoff_ratio": 4.893005601112081,
+          "trades": 23
+        },
+        "stability": {
+          "weekly_periods": 15,
+          "weekly_positive_ratio": 0.6,
+          "weekly_non_negative_ratio": 0.9333333333333333,
+          "weekly_avg_return_pct": 0.30077227566087145,
+          "weekly_median_return_pct": 0.24001696612447887,
+          "weekly_std_return_pct": 0.3582201011307071,
+          "weekly_worst_return_pct": -0.10863775929285113,
+          "weekly_best_return_pct": 1.0324390239308423,
+          "monthly_periods": 3,
+          "monthly_positive_ratio": 1.0,
+          "monthly_non_negative_ratio": 1.0,
+          "monthly_avg_return_pct": 1.380296890018921,
+          "monthly_median_return_pct": 1.4120662073604962,
+          "monthly_std_return_pct": 0.43000066119712854,
+          "monthly_worst_return_pct": 0.8384902924620574,
+          "monthly_best_return_pct": 1.8903341702342091,
+          "yearly_periods": 1,
+          "yearly_positive_ratio": 1.0,
+          "yearly_non_negative_ratio": 1.0,
+          "yearly_avg_return_pct": 4.195497562950634,
+          "yearly_median_return_pct": 4.195497562950634,
+          "yearly_std_return_pct": 0.0,
+          "yearly_worst_return_pct": 4.195497562950634,
+          "yearly_best_return_pct": 4.195497562950634
+        },
+        "rows": [
+          {
+            "symbol": "BTC-USDT",
+            "return_pct": 0.0,
+            "return_ann_pct": 0.0,
+            "cagr_pct": 0.0,
+            "sharpe": NaN,
+            "sortino": NaN,
+            "calmar": NaN,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": NaN,
+            "payoff_ratio": 0.0,
+            "trades": 0
+          },
+          {
+            "symbol": "ETH-USDT",
+            "return_pct": 0.69275,
+            "return_ann_pct": 2.3829199270844814,
+            "cagr_pct": 2.4057483178611117,
+            "sharpe": 2.2282197443541025,
+            "sortino": 23.651854756506246,
+            "calmar": 43.88930492484802,
+            "max_drawdown_pct": 0.05429386341763154,
+            "win_rate_pct": 66.66666666666666,
+            "payoff_ratio": 6.847586631774902,
+            "trades": 3
+          },
+          {
+            "symbol": "DOGE-USDT",
+            "return_pct": 2.0525,
+            "return_ann_pct": 7.176448217871001,
+            "cagr_pct": 7.24679245417803,
+            "sharpe": 4.170848736448496,
+            "sortino": 61.981347985089315,
+            "calmar": 41.12496688527094,
+            "max_drawdown_pct": 0.1745034406445023,
+            "win_rate_pct": 77.77777777777779,
+            "payoff_ratio": 7.15350341796875,
+            "trades": 9
+          },
+          {
+            "symbol": "PEPE-USDT",
+            "return_pct": 0.7553828125000001,
+            "return_ann_pct": 2.600323143686367,
+            "cagr_pct": 2.6252608353313,
+            "sharpe": 3.4394547429513413,
+            "sortino": 13.535585944223342,
+            "calmar": 7.846904566595718,
+            "max_drawdown_pct": 0.33138202734820377,
+            "win_rate_pct": 87.5,
+            "payoff_ratio": 1.1777198314666748,
+            "trades": 8
+          }
+        ]
+      }
+    ]
+  },
+  "baseline_holdout": {
+    "aggregate": {
+      "objective": 19.618678004721556,
+      "avg_ann_pct": 2.0425745865003564,
+      "avg_cagr_pct": 2.0482980842826235,
+      "worst_dd_pct": 0.8372375950251976,
+      "total_trades": 108,
+      "portfolio_return_ann_pct": 6.356408831937143,
+      "portfolio_cagr_pct": 6.356408831937143,
+      "portfolio_max_drawdown_pct": 1.1083836052625307,
+      "portfolio_trades": 109,
+      "positive_symbols": 3,
+      "avg_payoff_ratio": 1.541501224040985,
+      "weekly_periods": 52,
+      "weekly_positive_ratio": 0.40384615384615385,
+      "weekly_non_negative_ratio": 0.6923076923076923,
+      "weekly_avg_return_pct": 0.11920083800557954,
+      "weekly_median_return_pct": 0.0,
+      "weekly_std_return_pct": 0.37563291699182283,
+      "weekly_worst_return_pct": -0.4826503678330707,
+      "weekly_best_return_pct": 1.6240060500955167,
+      "monthly_periods": 12,
+      "monthly_positive_ratio": 0.6666666666666666,
+      "monthly_non_negative_ratio": 0.6666666666666666,
+      "monthly_avg_return_pct": 0.5181466921189445,
+      "monthly_median_return_pct": 0.20655408531021768,
+      "monthly_std_return_pct": 0.85698058256632,
+      "monthly_worst_return_pct": -0.38625624401806835,
+      "monthly_best_return_pct": 2.44683697188377,
+      "yearly_periods": 1,
+      "yearly_positive_ratio": 1.0,
+      "yearly_non_negative_ratio": 1.0,
+      "yearly_avg_return_pct": 0.9761232491504845,
+      "yearly_median_return_pct": 0.9761232491504845,
+      "yearly_std_return_pct": 0.0,
+      "yearly_worst_return_pct": 0.9761232491504845,
+      "yearly_best_return_pct": 0.9761232491504845
+    },
+    "portfolio": {
+      "return_pct": 6.351922766959683,
+      "return_ann_pct": 6.356408831937143,
+      "cagr_pct": 6.356408831937143,
+      "sharpe": 2.9286851555661233,
+      "sortino": 0.3562669402273316,
+      "calmar": 5.734845591144927,
+      "max_drawdown_pct": 1.1083836052625307,
+      "win_rate_pct": 56.88073394495413,
+      "payoff_ratio": 2.126372860395114,
+      "trades": 109
+    },
+    "stability": {
+      "weekly_periods": 52,
+      "weekly_positive_ratio": 0.40384615384615385,
+      "weekly_non_negative_ratio": 0.6923076923076923,
+      "weekly_avg_return_pct": 0.11920083800557954,
+      "weekly_median_return_pct": 0.0,
+      "weekly_std_return_pct": 0.37563291699182283,
+      "weekly_worst_return_pct": -0.4826503678330707,
+      "weekly_best_return_pct": 1.6240060500955167,
+      "monthly_periods": 12,
+      "monthly_positive_ratio": 0.6666666666666666,
+      "monthly_non_negative_ratio": 0.6666666666666666,
+      "monthly_avg_return_pct": 0.5181466921189445,
+      "monthly_median_return_pct": 0.20655408531021768,
+      "monthly_std_return_pct": 0.85698058256632,
+      "monthly_worst_return_pct": -0.38625624401806835,
+      "monthly_best_return_pct": 2.44683697188377,
+      "yearly_periods": 1,
+      "yearly_positive_ratio": 1.0,
+      "yearly_non_negative_ratio": 1.0,
+      "yearly_avg_return_pct": 0.9761232491504845,
+      "yearly_median_return_pct": 0.9761232491504845,
+      "yearly_std_return_pct": 0.0,
+      "yearly_worst_return_pct": 0.9761232491504845,
+      "yearly_best_return_pct": 0.9761232491504845
+    },
+    "rows": [
+      {
+        "symbol": "BTC-USDT",
+        "return_pct": 0.0,
+        "return_ann_pct": 0.0,
+        "cagr_pct": 0.0,
+        "sharpe": NaN,
+        "sortino": NaN,
+        "calmar": NaN,
+        "max_drawdown_pct": 0.0,
+        "win_rate_pct": NaN,
+        "payoff_ratio": 0.0,
+        "trades": 0
+      },
+      {
+        "symbol": "ETH-USDT",
+        "return_pct": 1.7599062499999998,
+        "return_ann_pct": 1.7550558122093385,
+        "cagr_pct": 1.76007514963048,
+        "sharpe": 1.4881997864416687,
+        "sortino": 3.422804064222275,
+        "calmar": 3.162562792180641,
+        "max_drawdown_pct": 0.554947340982026,
+        "win_rate_pct": 55.55555555555556,
+        "payoff_ratio": 1.639885425567627,
+        "trades": 36
+      },
+      {
+        "symbol": "DOGE-USDT",
+        "return_pct": 2.3703515625000002,
+        "return_ann_pct": 2.363799244818199,
+        "cagr_pct": 2.370351562500006,
+        "sharpe": 1.7107619555256668,
+        "sortino": 4.552378943870445,
+        "calmar": 3.2033838512425015,
+        "max_drawdown_pct": 0.7379069616965661,
+        "win_rate_pct": 53.48837209302325,
+        "payoff_ratio": 1.958878517150879,
+        "trades": 43
+      },
+      {
+        "symbol": "PEPE-USDT",
+        "return_pct": 4.062765625,
+        "return_ann_pct": 4.051443288973888,
+        "cagr_pct": 4.062765625000009,
+        "sharpe": 1.9601295432088344,
+        "sortino": 8.611891738258056,
+        "calmar": 4.839060397009472,
+        "max_drawdown_pct": 0.8372375950251976,
+        "win_rate_pct": 62.06896551724138,
+        "payoff_ratio": 2.5672409534454346,
+        "trades": 29
+      }
+    ]
+  },
+  "baseline_test": {
+    "aggregate": {
+      "objective": 25.264638422436068,
+      "avg_ann_pct": 2.6523068134096994,
+      "avg_cagr_pct": 2.653567687634939,
+      "worst_dd_pct": 1.8908383867641154,
+      "total_trades": 664,
+      "portfolio_return_ann_pct": 8.068721056919138,
+      "portfolio_cagr_pct": 8.068721056919138,
+      "portfolio_max_drawdown_pct": 1.7102656674088168,
+      "portfolio_trades": 687,
+      "positive_symbols": 4,
+      "avg_payoff_ratio": 1.934068414289709,
+      "weekly_periods": 350,
+      "weekly_positive_ratio": 0.4114285714285714,
+      "weekly_non_negative_ratio": 0.7285714285714285,
+      "weekly_avg_return_pct": 0.14974345849832812,
+      "weekly_median_return_pct": 0.0,
+      "weekly_std_return_pct": 0.4158888371806734,
+      "weekly_worst_return_pct": -0.9525699561154233,
+      "weekly_best_return_pct": 3.430624618324929,
+      "monthly_periods": 80,
+      "monthly_positive_ratio": 0.7625,
+      "monthly_non_negative_ratio": 0.7625,
+      "monthly_avg_return_pct": 0.6589305602974244,
+      "monthly_median_return_pct": 0.3401674229755236,
+      "monthly_std_return_pct": 0.9394134389052771,
+      "monthly_worst_return_pct": -0.62422035154307,
+      "monthly_best_return_pct": 3.7657851487907346,
+      "yearly_periods": 7,
+      "yearly_positive_ratio": 1.0,
+      "yearly_non_negative_ratio": 1.0,
+      "yearly_avg_return_pct": 7.68685186558443,
+      "yearly_median_return_pct": 7.112856673670587,
+      "yearly_std_return_pct": 4.48693872374996,
+      "yearly_worst_return_pct": 0.9761232491504179,
+      "yearly_best_return_pct": 16.06703058286767
+    },
+    "portfolio": {
+      "return_pct": 68.32281870760492,
+      "return_ann_pct": 8.068721056919138,
+      "cagr_pct": 8.068721056919138,
+      "sharpe": 2.9111717474622245,
+      "sortino": 0.357590350509338,
+      "calmar": 4.717817360588117,
+      "max_drawdown_pct": 1.7102656674088168,
+      "win_rate_pct": 59.97088791848617,
+      "payoff_ratio": 2.0892223979858797,
+      "trades": 687
+    },
+    "stability": {
+      "weekly_periods": 350,
+      "weekly_positive_ratio": 0.4114285714285714,
+      "weekly_non_negative_ratio": 0.7285714285714285,
+      "weekly_avg_return_pct": 0.14974345849832812,
+      "weekly_median_return_pct": 0.0,
+      "weekly_std_return_pct": 0.4158888371806734,
+      "weekly_worst_return_pct": -0.9525699561154233,
+      "weekly_best_return_pct": 3.430624618324929,
+      "monthly_periods": 80,
+      "monthly_positive_ratio": 0.7625,
+      "monthly_non_negative_ratio": 0.7625,
+      "monthly_avg_return_pct": 0.6589305602974244,
+      "monthly_median_return_pct": 0.3401674229755236,
+      "monthly_std_return_pct": 0.9394134389052771,
+      "monthly_worst_return_pct": -0.62422035154307,
+      "monthly_best_return_pct": 3.7657851487907346,
+      "yearly_periods": 7,
+      "yearly_positive_ratio": 1.0,
+      "yearly_non_negative_ratio": 1.0,
+      "yearly_avg_return_pct": 7.68685186558443,
+      "yearly_median_return_pct": 7.112856673670587,
+      "yearly_std_return_pct": 4.48693872374996,
+      "yearly_worst_return_pct": 0.9761232491504179,
+      "yearly_best_return_pct": 16.06703058286767
+    },
+    "rows": [
+      {
+        "symbol": "BTC-USDT",
+        "return_pct": 0.23976927976268053,
+        "return_ann_pct": 0.03565522793715914,
+        "cagr_pct": 0.035671850044050046,
+        "sharpe": 0.1957585699410094,
+        "sortino": 0.2905337752275603,
+        "calmar": 0.0930005910619799,
+        "max_drawdown_pct": 0.3833871110926257,
+        "win_rate_pct": 50.0,
+        "payoff_ratio": 1.3217582810678326,
+        "trades": 26
+      },
+      {
+        "symbol": "ETH-USDT",
+        "return_pct": 20.258703125,
+        "return_ann_pct": 2.7841125211573337,
+        "cagr_pct": 2.7853041068188533,
+        "sharpe": 2.283955979388532,
+        "sortino": 7.107746051278236,
+        "calmar": 4.048036924054975,
+        "max_drawdown_pct": 0.6877685587829196,
+        "win_rate_pct": 59.4488188976378,
+        "payoff_ratio": 2.1801400184631348,
+        "trades": 254
+      },
+      {
+        "symbol": "DOGE-USDT",
+        "return_pct": 14.654234375,
+        "return_ann_pct": 2.0607510950958696,
+        "cagr_pct": 2.061259320614961,
+        "sharpe": 1.1118914046858044,
+        "sortino": 2.4240554975360777,
+        "calmar": 1.089861042340342,
+        "max_drawdown_pct": 1.8908383867641154,
+        "win_rate_pct": 49.24812030075188,
+        "payoff_ratio": 1.7558156251907349,
+        "trades": 266
+      },
+      {
+        "symbol": "PEPE-USDT",
+        "return_pct": 17.631609375,
+        "return_ann_pct": 5.728708409448435,
+        "cagr_pct": 5.732035473061892,
+        "sharpe": 2.140267389270265,
+        "sortino": 8.245949442017352,
+        "calmar": 6.4357708302894245,
+        "max_drawdown_pct": 0.8901355502726638,
+        "win_rate_pct": 56.779661016949156,
+        "payoff_ratio": 2.478559732437134,
+        "trades": 118
+      }
+    ]
+  },
+  "best_params": {
+    "entry_quantile": 0.45,
+    "exit_quantile": 0.25,
+    "confidence_threshold": 0.35,
+    "exit_confidence_threshold": 0.3,
+    "min_confirmation_count": 2,
+    "enable_range_reversion": true,
+    "qlib_rank_threshold": 0.55,
+    "qlib_exit_rank_threshold": 0.25,
+    "confidence_weight": 0.5,
+    "stop_loss_scale": 1.0,
+    "take_profit_scale": 1.0,
+    "kelly_scale": 0.6,
+    "max_leverage": 6.0,
+    "initial_entry_fraction": 0.55,
+    "layer_stake_fraction": 0.2,
+    "max_entry_layers": 3,
+    "reduce_stake_fraction": 0.45,
+    "partial_take_profit_scale": 0.65,
+    "rotation_top_n": 2,
+    "rotation_min_score": 0.75,
+    "range_entry_zone": 0.2,
+    "range_exit_zone": 0.72,
+    "range_qlib_rank_threshold": 0.45,
+    "range_position_scale": 0.75,
+    "range_leverage_cap": 4.0,
+    "range_profit_capture": 0.95
+  },
+  "best_validation": {
+    "aggregate": {
+      "objective": 113.09613183588496,
+      "avg_ann_pct": 524.2488376293769,
+      "avg_cagr_pct": 524.2488376293769,
+      "worst_dd_pct": 19.93311805243473,
+      "total_trades": 1848,
+      "portfolio_return_ann_pct": 524.2488376293769,
+      "portfolio_cagr_pct": 524.2488376293769,
+      "portfolio_max_drawdown_pct": 19.93311805243473,
+      "portfolio_trades": 1848,
+      "positive_symbols": 4,
+      "avg_payoff_ratio": 2.6520852350300452,
+      "folds": 12,
+      "positive_fold_ratio": 1.0,
+      "recent_return_ann_pct": 725.0533719973482,
+      "return_ann_std": 564.3141769751585,
+      "return_pct_std": 99.3606855539424,
+      "worst_fold_return_ann_pct": 31.104686877662367,
+      "avg_drawdown_pct": 12.044812225047059,
+      "profitable_symbol_ratio": 1.0,
+      "avg_log_growth": 0.6808787750075544,
+      "log_growth_std": 0.41048039446897583,
+      "weekly_periods": 298,
+      "weekly_positive_ratio": 0.5067114093959731,
+      "weekly_non_negative_ratio": 0.6174496644295302,
+      "weekly_avg_return_pct": 3.0672966410764775,
+      "weekly_median_return_pct": 0.06327610944906192,
+      "weekly_std_return_pct": 8.454477517840477,
+      "weekly_worst_return_pct": -12.889103921834433,
+      "weekly_best_return_pct": 90.3978586060281,
+      "monthly_periods": 68,
+      "monthly_positive_ratio": 0.7794117647058824,
+      "monthly_non_negative_ratio": 0.7794117647058824,
+      "monthly_avg_return_pct": 14.594476335990981,
+      "monthly_median_return_pct": 7.3420586297987755,
+      "monthly_std_return_pct": 22.367733485916393,
+      "monthly_worst_return_pct": -8.92687799374501,
+      "monthly_best_return_pct": 110.44131331789573,
+      "yearly_periods": 6,
+      "yearly_positive_ratio": 1.0,
+      "yearly_non_negative_ratio": 1.0,
+      "yearly_avg_return_pct": 443.9128374370054,
+      "yearly_median_return_pct": 172.7414307661401,
+      "yearly_std_return_pct": 543.1292004815126,
+      "yearly_worst_return_pct": 76.44442329712248,
+      "yearly_best_return_pct": 1612.8630913979453
+    },
+    "portfolio": {
+      "return_pct": 116.30342666835975,
+      "return_ann_pct": 524.2488376293769,
+      "cagr_pct": 524.2488376293769,
+      "sharpe": 3.425868447572021,
+      "sortino": 0.6951857568234548,
+      "calmar": 46.845684633124115,
+      "max_drawdown_pct": 19.93311805243473,
+      "win_rate_pct": 51.66792657011666,
+      "payoff_ratio": 2.6520852350300452,
+      "trades": 1848,
+      "folds": 12,
+      "positive_fold_ratio": 1.0,
+      "weekly_periods": 298,
+      "weekly_positive_ratio": 0.5067114093959731,
+      "weekly_non_negative_ratio": 0.6174496644295302,
+      "weekly_avg_return_pct": 3.0672966410764775,
+      "weekly_median_return_pct": 0.06327610944906192,
+      "weekly_std_return_pct": 8.454477517840477,
+      "weekly_worst_return_pct": -12.889103921834433,
+      "weekly_best_return_pct": 90.3978586060281,
+      "monthly_periods": 68,
+      "monthly_positive_ratio": 0.7794117647058824,
+      "monthly_non_negative_ratio": 0.7794117647058824,
+      "monthly_avg_return_pct": 14.594476335990981,
+      "monthly_median_return_pct": 7.3420586297987755,
+      "monthly_std_return_pct": 22.367733485916393,
+      "monthly_worst_return_pct": -8.92687799374501,
+      "monthly_best_return_pct": 110.44131331789573,
+      "yearly_periods": 6,
+      "yearly_positive_ratio": 1.0,
+      "yearly_non_negative_ratio": 1.0,
+      "yearly_avg_return_pct": 443.9128374370054,
+      "yearly_median_return_pct": 172.7414307661401,
+      "yearly_std_return_pct": 543.1292004815126,
+      "yearly_worst_return_pct": 76.44442329712248,
+      "yearly_best_return_pct": 1612.8630913979453
+    },
+    "rows": [
+      {
+        "symbol": "BTC-USDT",
+        "return_pct": 7.795340082803338,
+        "return_ann_pct": 18.994334917363204,
+        "cagr_pct": 19.14028933548929,
+        "sharpe": 0.9681248585219873,
+        "sortino": 9.227950739809119,
+        "calmar": 4.807035785739972,
+        "max_drawdown_pct": 8.176786975846317,
+        "win_rate_pct": 44.25392650227843,
+        "payoff_ratio": 3.1283244023224888,
+        "trades": 339,
+        "folds": 12,
+        "positive_folds": 11
+      },
+      {
+        "symbol": "DOGE-USDT",
+        "return_pct": 28.947619791666668,
+        "return_ann_pct": 88.37459866020434,
+        "cagr_pct": 89.29909366370707,
+        "sharpe": 0.4909891190401316,
+        "sortino": 7.396475910844072,
+        "calmar": 10.032517262127769,
+        "max_drawdown_pct": 39.35918467644856,
+        "win_rate_pct": 45.712075635614745,
+        "payoff_ratio": 2.0958090970913568,
+        "trades": 580,
+        "folds": 12,
+        "positive_folds": 9
+      },
+      {
+        "symbol": "ETH-USDT",
+        "return_pct": 32.8871875,
+        "return_ann_pct": 87.65706069903733,
+        "cagr_pct": 88.43837837255319,
+        "sharpe": 1.7130860763149942,
+        "sortino": 15.827886496872104,
+        "calmar": 14.149292133539127,
+        "max_drawdown_pct": 12.085755632338891,
+        "win_rate_pct": 50.679087779715324,
+        "payoff_ratio": 3.39707159002622,
+        "trades": 522,
+        "folds": 12,
+        "positive_folds": 12
+      },
+      {
+        "symbol": "PEPE-USDT",
+        "return_pct": 30.392668619791667,
+        "return_ann_pct": 130.8755277318306,
+        "cagr_pct": 132.7676879186408,
+        "sharpe": 0.6701375581891993,
+        "sortino": 18.912142901418765,
+        "calmar": 27.890330398177397,
+        "max_drawdown_pct": 15.231067704026447,
+        "win_rate_pct": 20.364284683904938,
+        "payoff_ratio": 2.653685361146927,
+        "trades": 245,
+        "folds": 12,
+        "positive_folds": 5
+      }
+    ],
+    "stability": {
+      "weekly_periods": 298,
+      "weekly_positive_ratio": 0.5067114093959731,
+      "weekly_non_negative_ratio": 0.6174496644295302,
+      "weekly_avg_return_pct": 3.0672966410764775,
+      "weekly_median_return_pct": 0.06327610944906192,
+      "weekly_std_return_pct": 8.454477517840477,
+      "weekly_worst_return_pct": -12.889103921834433,
+      "weekly_best_return_pct": 90.3978586060281,
+      "monthly_periods": 68,
+      "monthly_positive_ratio": 0.7794117647058824,
+      "monthly_non_negative_ratio": 0.7794117647058824,
+      "monthly_avg_return_pct": 14.594476335990981,
+      "monthly_median_return_pct": 7.3420586297987755,
+      "monthly_std_return_pct": 22.367733485916393,
+      "monthly_worst_return_pct": -8.92687799374501,
+      "monthly_best_return_pct": 110.44131331789573,
+      "yearly_periods": 6,
+      "yearly_positive_ratio": 1.0,
+      "yearly_non_negative_ratio": 1.0,
+      "yearly_avg_return_pct": 443.9128374370054,
+      "yearly_median_return_pct": 172.7414307661401,
+      "yearly_std_return_pct": 543.1292004815126,
+      "yearly_worst_return_pct": 76.44442329712248,
+      "yearly_best_return_pct": 1612.8630913979453
+    },
+    "folds": [
+      {
+        "fold": 1,
+        "window": {
+          "calibration": [
+            "2018-07-13T18:35:00+00:00",
+            "2019-07-13T18:34:59+00:00"
+          ],
+          "evaluation": [
+            "2019-07-13T18:35:00+00:00",
+            "2020-01-09T18:34:59+00:00"
+          ]
+        },
+        "portfolio": {
+          "return_pct": 34.80330330395547,
+          "return_ann_pct": 83.31123287653486,
+          "cagr_pct": 83.31123287653486,
+          "sharpe": 2.4369997770697536,
+          "sortino": 0.42250972725180336,
+          "calmar": 9.45998226669526,
+          "max_drawdown_pct": 8.806700745078533,
+          "win_rate_pct": 46.26865671641791,
+          "payoff_ratio": 3.563073400603917,
+          "trades": 67
+        },
+        "stability": {
+          "weekly_periods": 26,
+          "weekly_positive_ratio": 0.34615384615384615,
+          "weekly_non_negative_ratio": 0.5769230769230769,
+          "weekly_avg_return_pct": 1.2455729546635739,
+          "weekly_median_return_pct": 0.0,
+          "weekly_std_return_pct": 4.394936139631766,
+          "weekly_worst_return_pct": -4.27500776672921,
+          "weekly_best_return_pct": 15.370974519524939,
+          "monthly_periods": 6,
+          "monthly_positive_ratio": 0.6666666666666666,
+          "monthly_non_negative_ratio": 0.6666666666666666,
+          "monthly_avg_return_pct": 6.201157947910346,
+          "monthly_median_return_pct": 6.234329852477782,
+          "monthly_std_return_pct": 8.428011268826635,
+          "monthly_worst_return_pct": -5.065000433186806,
+          "monthly_best_return_pct": 17.506182711956697,
+          "yearly_periods": 1,
+          "yearly_positive_ratio": 1.0,
+          "yearly_non_negative_ratio": 1.0,
+          "yearly_avg_return_pct": 7.573532965314467,
+          "yearly_median_return_pct": 7.573532965314467,
+          "yearly_std_return_pct": 0.0,
+          "yearly_worst_return_pct": 7.573532965314467,
+          "yearly_best_return_pct": 7.573532965314467
+        },
+        "rows": [
+          {
+            "symbol": "BTC-USDT",
+            "return_pct": 8.064329342020269,
+            "return_ann_pct": 16.92920482246265,
+            "cagr_pct": 17.03120151655064,
+            "sharpe": 1.2718606691265677,
+            "sortino": 2.9847198925387675,
+            "calmar": 2.0703981738145303,
+            "max_drawdown_pct": 8.176786975846317,
+            "win_rate_pct": 45.714285714285715,
+            "payoff_ratio": 2.142690656221599,
+            "trades": 35
+          },
+          {
+            "symbol": "ETH-USDT",
+            "return_pct": 22.057156250000002,
+            "return_ann_pct": 49.47248149578811,
+            "cagr_pct": 49.80779625275298,
+            "sharpe": 1.8214532420594196,
+            "sortino": 16.80641519899694,
+            "calmar": 17.541265767948296,
+            "max_drawdown_pct": 2.820348437236786,
+            "win_rate_pct": 52.17391304347826,
+            "payoff_ratio": 4.7794389724731445,
+            "trades": 23
+          },
+          {
+            "symbol": "DOGE-USDT",
+            "return_pct": 6.754101562500001,
+            "return_ann_pct": 14.51588331159428,
+            "cagr_pct": 14.569053779198239,
+            "sharpe": 0.679154740097873,
+            "sortino": 1.8761831127876123,
+            "calmar": 2.709584070916669,
+            "max_drawdown_pct": 5.35723673142331,
+            "win_rate_pct": 33.33333333333333,
+            "payoff_ratio": 4.008664131164551,
+            "trades": 6
+          },
+          {
+            "symbol": "PEPE-USDT",
+            "return_pct": 0.0,
+            "return_ann_pct": 0.0,
+            "cagr_pct": 0.0,
+            "sharpe": 0.0,
+            "sortino": 0.0,
+            "calmar": 0.0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0.0,
+            "payoff_ratio": 0.0,
+            "trades": 0
+          }
+        ]
+      },
+      {
+        "fold": 2,
+        "window": {
+          "calibration": [
+            "2019-01-09T18:35:00+00:00",
+            "2020-01-09T18:34:59+00:00"
+          ],
+          "evaluation": [
+            "2020-01-09T18:35:00+00:00",
+            "2020-07-07T18:34:59+00:00"
+          ]
+        },
+        "portfolio": {
+          "return_pct": 14.278014236201631,
+          "return_ann_pct": 31.104686877662367,
+          "cagr_pct": 31.104686877662367,
+          "sharpe": 1.0876874997463686,
+          "sortino": 0.12523357034408286,
+          "calmar": 2.1618150081253686,
+          "max_drawdown_pct": 14.388227836680157,
+          "win_rate_pct": 54.310344827586206,
+          "payoff_ratio": 1.4732390983752233,
+          "trades": 116
+        },
+        "stability": {
+          "weekly_periods": 26,
+          "weekly_positive_ratio": 0.4230769230769231,
+          "weekly_non_negative_ratio": 0.6153846153846154,
+          "weekly_avg_return_pct": 0.5299828317684183,
+          "weekly_median_return_pct": 0.0,
+          "weekly_std_return_pct": 2.9348062743229013,
+          "weekly_worst_return_pct": -8.880191287773142,
+          "weekly_best_return_pct": 7.816618725179936,
+          "monthly_periods": 6,
+          "monthly_positive_ratio": 0.5,
+          "monthly_non_negative_ratio": 0.5,
+          "monthly_avg_return_pct": 2.05242888040744,
+          "monthly_median_return_pct": 2.6366061697358445,
+          "monthly_std_return_pct": 4.488397594492131,
+          "monthly_worst_return_pct": -4.54041319949372,
+          "monthly_best_return_pct": 7.573198254377611,
+          "yearly_periods": 0,
+          "yearly_positive_ratio": 0.0,
+          "yearly_non_negative_ratio": 0.0,
+          "yearly_avg_return_pct": 0.0,
+          "yearly_median_return_pct": 0.0,
+          "yearly_std_return_pct": 0.0,
+          "yearly_worst_return_pct": 0.0,
+          "yearly_best_return_pct": 0.0
+        },
+        "rows": [
+          {
+            "symbol": "BTC-USDT",
+            "return_pct": 0.717703934910649,
+            "return_ann_pct": 1.4525834843236218,
+            "cagr_pct": 1.460740430184937,
+            "sharpe": 0.15435312462993905,
+            "sortino": 0.2083890054397628,
+            "calmar": 0.20949702534324935,
+            "max_drawdown_pct": 6.933671167615119,
+            "win_rate_pct": 40.0,
+            "payoff_ratio": 1.5787653585855184,
+            "trades": 40
+          },
+          {
+            "symbol": "ETH-USDT",
+            "return_pct": 31.753140624999997,
+            "return_ann_pct": 74.3841228930279,
+            "cagr_pct": 74.92558347289288,
+            "sharpe": 1.4733837306748827,
+            "sortino": 11.378853279395095,
+            "calmar": 8.448567748164082,
+            "max_drawdown_pct": 8.804347092936782,
+            "win_rate_pct": 49.122807017543856,
+            "payoff_ratio": 2.6843512058258057,
+            "trades": 57
+          },
+          {
+            "symbol": "DOGE-USDT",
+            "return_pct": -8.3283515625,
+            "return_ann_pct": -16.0841219335476,
+            "cagr_pct": -16.16611782700662,
+            "sharpe": -2.4163985533600645,
+            "sortino": -2.0491440634706635,
+            "calmar": -1.6809132264288915,
+            "max_drawdown_pct": 9.56868069133967,
+            "win_rate_pct": 44.44444444444444,
+            "payoff_ratio": 0.1750233769416809,
+            "trades": 9
+          },
+          {
+            "symbol": "PEPE-USDT",
+            "return_pct": 0.0,
+            "return_ann_pct": 0.0,
+            "cagr_pct": 0.0,
+            "sharpe": 0.0,
+            "sortino": 0.0,
+            "calmar": 0.0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0.0,
+            "payoff_ratio": 0.0,
+            "trades": 0
+          }
+        ]
+      },
+      {
+        "fold": 3,
+        "window": {
+          "calibration": [
+            "2019-07-08T18:35:00+00:00",
+            "2020-07-07T18:34:59+00:00"
+          ],
+          "evaluation": [
+            "2020-07-07T18:35:00+00:00",
+            "2021-01-03T18:34:59+00:00"
+          ]
+        },
+        "portfolio": {
+          "return_pct": 85.89699740309251,
+          "return_ann_pct": 251.89173632389762,
+          "cagr_pct": 251.89173632389762,
+          "sharpe": 3.233416331031009,
+          "sortino": 0.5796719442055607,
+          "calmar": 15.779309062657683,
+          "max_drawdown_pct": 15.963419901572795,
+          "win_rate_pct": 53.00546448087432,
+          "payoff_ratio": 2.0519741806423766,
+          "trades": 183
+        },
+        "stability": {
+          "weekly_periods": 25,
+          "weekly_positive_ratio": 0.6,
+          "weekly_non_negative_ratio": 0.64,
+          "weekly_avg_return_pct": 2.5667297751104474,
+          "weekly_median_return_pct": 0.3889743617995878,
+          "weekly_std_return_pct": 5.327759369990406,
+          "weekly_worst_return_pct": -4.964276433602677,
+          "weekly_best_return_pct": 17.33841854121314,
+          "monthly_periods": 6,
+          "monthly_positive_ratio": 0.6666666666666666,
+          "monthly_non_negative_ratio": 0.6666666666666666,
+          "monthly_avg_return_pct": 7.487352948647921,
+          "monthly_median_return_pct": 2.5909095452014252,
+          "monthly_std_return_pct": 17.2102004443165,
+          "monthly_worst_return_pct": -8.92687799374501,
+          "monthly_best_return_pct": 44.04385585855452,
+          "yearly_periods": 1,
+          "yearly_positive_ratio": 1.0,
+          "yearly_non_negative_ratio": 1.0,
+          "yearly_avg_return_pct": 7.729998760581158,
+          "yearly_median_return_pct": 7.729998760581158,
+          "yearly_std_return_pct": 0.0,
+          "yearly_worst_return_pct": 7.729998760581158,
+          "yearly_best_return_pct": 7.729998760581158
+        },
+        "rows": [
+          {
+            "symbol": "BTC-USDT",
+            "return_pct": 14.436587061641301,
+            "return_ann_pct": 31.250353838339674,
+            "cagr_pct": 31.449484582382524,
+            "sharpe": 1.5647916597332572,
+            "sortino": 8.292718382137895,
+            "calmar": 7.388256000566089,
+            "max_drawdown_pct": 4.229733490007015,
+            "win_rate_pct": 35.8974358974359,
+            "payoff_ratio": 4.148782158183064,
+            "trades": 39
+          },
+          {
+            "symbol": "ETH-USDT",
+            "return_pct": 67.230609375,
+            "return_ann_pct": 182.05442075746384,
+            "cagr_pct": 183.68965288607814,
+            "sharpe": 2.1111571946415055,
+            "sortino": 37.6512088275694,
+            "calmar": 21.520002999919356,
+            "max_drawdown_pct": 8.459776736933822,
+            "win_rate_pct": 48.64864864864865,
+            "payoff_ratio": 4.583496570587158,
+            "trades": 74
+          },
+          {
+            "symbol": "DOGE-USDT",
+            "return_pct": 28.4789453125,
+            "return_ann_pct": 65.75543225321093,
+            "cagr_pct": 66.22306761348374,
+            "sharpe": 1.1372767039122074,
+            "sortino": 4.337334108973513,
+            "calmar": 3.942104311080797,
+            "max_drawdown_pct": 16.68028724363788,
+            "win_rate_pct": 49.056603773584904,
+            "payoff_ratio": 1.6375058889389038,
+            "trades": 53
+          },
+          {
+            "symbol": "PEPE-USDT",
+            "return_pct": 0.0,
+            "return_ann_pct": 0.0,
+            "cagr_pct": 0.0,
+            "sharpe": 0.0,
+            "sortino": 0.0,
+            "calmar": 0.0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0.0,
+            "payoff_ratio": 0.0,
+            "trades": 0
+          }
+        ]
+      },
+      {
+        "fold": 4,
+        "window": {
+          "calibration": [
+            "2020-01-04T18:35:00+00:00",
+            "2021-01-03T18:34:59+00:00"
+          ],
+          "evaluation": [
+            "2021-01-03T18:35:00+00:00",
+            "2021-07-02T18:34:59+00:00"
+          ]
+        },
+        "portfolio": {
+          "return_pct": 212.66881145349208,
+          "return_ann_pct": 910.7144420170323,
+          "cagr_pct": 910.7144420170323,
+          "sharpe": 4.149027394640086,
+          "sortino": 0.854524881647299,
+          "calmar": 45.68850892376033,
+          "max_drawdown_pct": 19.93311805243473,
+          "win_rate_pct": 55.666666666666664,
+          "payoff_ratio": 1.7626419767056358,
+          "trades": 300
+        },
+        "stability": {
+          "weekly_periods": 26,
+          "weekly_positive_ratio": 0.5769230769230769,
+          "weekly_non_negative_ratio": 0.5769230769230769,
+          "weekly_avg_return_pct": 4.9085297799900385,
+          "weekly_median_return_pct": 1.7618597728350505,
+          "weekly_std_return_pct": 9.776368396396215,
+          "weekly_worst_return_pct": -12.889103921834444,
+          "weekly_best_return_pct": 32.605467853306024,
+          "monthly_periods": 6,
+          "monthly_positive_ratio": 0.8333333333333334,
+          "monthly_non_negative_ratio": 0.8333333333333334,
+          "monthly_avg_return_pct": 18.677439175057295,
+          "monthly_median_return_pct": 7.274465037840006,
+          "monthly_std_return_pct": 22.551467256844795,
+          "monthly_worst_return_pct": -0.10720091124458708,
+          "monthly_best_return_pct": 60.77904894816668,
+          "yearly_periods": 0,
+          "yearly_positive_ratio": 0.0,
+          "yearly_non_negative_ratio": 0.0,
+          "yearly_avg_return_pct": 0.0,
+          "yearly_median_return_pct": 0.0,
+          "yearly_std_return_pct": 0.0,
+          "yearly_worst_return_pct": 0.0,
+          "yearly_best_return_pct": 0.0
+        },
+        "rows": [
+          {
+            "symbol": "BTC-USDT",
+            "return_pct": 22.71029768571304,
+            "return_ann_pct": 51.08981354656157,
+            "cagr_pct": 51.43784226337156,
+            "sharpe": 1.867218494312674,
+            "sortino": 10.201663488507876,
+            "calmar": 10.385963287746359,
+            "max_drawdown_pct": 4.919121330501786,
+            "win_rate_pct": 50.0,
+            "payoff_ratio": 2.3858667927126476,
+            "trades": 68
+          },
+          {
+            "symbol": "ETH-USDT",
+            "return_pct": 115.6191875,
+            "return_ann_pct": 370.8748998640928,
+            "cagr_pct": 374.95991453096167,
+            "sharpe": 2.131681019449107,
+            "sortino": 23.36716957346076,
+            "calmar": 30.68694346853341,
+            "max_drawdown_pct": 12.085755632338891,
+            "win_rate_pct": 59.25925925925925,
+            "payoff_ratio": 1.8855247497558594,
+            "trades": 108
+          },
+          {
+            "symbol": "DOGE-USDT",
+            "return_pct": 26.717515624999997,
+            "return_ann_pct": 61.20472768180561,
+            "cagr_pct": 61.63443731377782,
+            "sharpe": 0.9092665993261003,
+            "sortino": 2.62298205776119,
+            "calmar": 3.034365417208351,
+            "max_drawdown_pct": 20.17051978469838,
+            "win_rate_pct": 45.83333333333333,
+            "payoff_ratio": 1.4963138103485107,
+            "trades": 96
+          },
+          {
+            "symbol": "PEPE-USDT",
+            "return_pct": 0.0,
+            "return_ann_pct": 0.0,
+            "cagr_pct": 0.0,
+            "sharpe": 0.0,
+            "sortino": 0.0,
+            "calmar": 0.0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0.0,
+            "payoff_ratio": 0.0,
+            "trades": 0
+          }
+        ]
+      },
+      {
+        "fold": 5,
+        "window": {
+          "calibration": [
+            "2020-07-02T18:35:00+00:00",
+            "2021-07-02T18:34:59+00:00"
+          ],
+          "evaluation": [
+            "2021-07-02T18:35:00+00:00",
+            "2021-12-29T18:34:59+00:00"
+          ]
+        },
+        "portfolio": {
+          "return_pct": 83.04217470443407,
+          "return_ann_pct": 241.01254309883706,
+          "cagr_pct": 241.01254309883706,
+          "sharpe": 3.4103450472564973,
+          "sortino": 0.5761103629960284,
+          "calmar": 18.480249464365826,
+          "max_drawdown_pct": 13.04162822929229,
+          "win_rate_pct": 56.08465608465608,
+          "payoff_ratio": 1.8522899988363155,
+          "trades": 189
+        },
+        "stability": {
+          "weekly_periods": 26,
+          "weekly_positive_ratio": 0.5769230769230769,
+          "weekly_non_negative_ratio": 0.6538461538461539,
+          "weekly_avg_return_pct": 2.5013204047208664,
+          "weekly_median_return_pct": 0.4395944271849972,
+          "weekly_std_return_pct": 5.60625502439702,
+          "weekly_worst_return_pct": -7.972809679972171,
+          "weekly_best_return_pct": 15.911281633926123,
+          "monthly_periods": 5,
+          "monthly_positive_ratio": 0.8,
+          "monthly_non_negative_ratio": 0.8,
+          "monthly_avg_return_pct": 13.016576697275003,
+          "monthly_median_return_pct": 6.395625436552743,
+          "monthly_std_return_pct": 16.507167951508812,
+          "monthly_worst_return_pct": -4.352835480225115,
+          "monthly_best_return_pct": 43.65092329852016,
+          "yearly_periods": 0,
+          "yearly_positive_ratio": 0.0,
+          "yearly_non_negative_ratio": 0.0,
+          "yearly_avg_return_pct": 0.0,
+          "yearly_median_return_pct": 0.0,
+          "yearly_std_return_pct": 0.0,
+          "yearly_worst_return_pct": 0.0,
+          "yearly_best_return_pct": 0.0
+        },
+        "rows": [
+          {
+            "symbol": "BTC-USDT",
+            "return_pct": 8.088082835792012,
+            "return_ann_pct": 16.98104075779394,
+            "cagr_pct": 17.083371967525252,
+            "sharpe": 1.1220102961596967,
+            "sortino": 3.025524733082395,
+            "calmar": 3.947846686875501,
+            "max_drawdown_pct": 4.301342505079264,
+            "win_rate_pct": 45.45454545454545,
+            "payoff_ratio": 2.2458316323022878,
+            "trades": 33
+          },
+          {
+            "symbol": "ETH-USDT",
+            "return_pct": 23.419164062500002,
+            "return_ann_pct": 52.85506350683653,
+            "cagr_pct": 53.21707997376086,
+            "sharpe": 1.8557049912105916,
+            "sortino": 11.741770086389305,
+            "calmar": 14.181414638383817,
+            "max_drawdown_pct": 3.7270656598515584,
+            "win_rate_pct": 45.09803921568628,
+            "payoff_ratio": 2.868861436843872,
+            "trades": 51
+          },
+          {
+            "symbol": "DOGE-USDT",
+            "return_pct": 63.909031250000005,
+            "return_ann_pct": 170.8711308408298,
+            "cagr_pct": 172.380086069071,
+            "sharpe": 1.492797431434323,
+            "sortino": 12.09601077081026,
+            "calmar": 10.733850895093976,
+            "max_drawdown_pct": 15.918902965097859,
+            "win_rate_pct": 55.952380952380956,
+            "payoff_ratio": 1.6381951570510864,
+            "trades": 84
+          },
+          {
+            "symbol": "PEPE-USDT",
+            "return_pct": 0.0,
+            "return_ann_pct": 0.0,
+            "cagr_pct": 0.0,
+            "sharpe": 0.0,
+            "sortino": 0.0,
+            "calmar": 0.0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0.0,
+            "payoff_ratio": 0.0,
+            "trades": 0
+          }
+        ]
+      },
+      {
+        "fold": 6,
+        "window": {
+          "calibration": [
+            "2020-12-29T18:35:00+00:00",
+            "2021-12-29T18:34:59+00:00"
+          ],
+          "evaluation": [
+            "2021-12-29T18:35:00+00:00",
+            "2022-06-27T18:34:59+00:00"
+          ]
+        },
+        "portfolio": {
+          "return_pct": 36.001650689981865,
+          "return_ann_pct": 86.6330807801585,
+          "cagr_pct": 86.6330807801585,
+          "sharpe": 2.4561886107167603,
+          "sortino": 0.4004968893546265,
+          "calmar": 9.310863512140315,
+          "max_drawdown_pct": 9.304516242472971,
+          "win_rate_pct": 46.95652173913044,
+          "payoff_ratio": 2.5931942600034135,
+          "trades": 115
+        },
+        "stability": {
+          "weekly_periods": 26,
+          "weekly_positive_ratio": 0.4230769230769231,
+          "weekly_non_negative_ratio": 0.5384615384615384,
+          "weekly_avg_return_pct": 1.309676823195531,
+          "weekly_median_return_pct": 0.0,
+          "weekly_std_return_pct": 4.5362634977392995,
+          "weekly_worst_return_pct": -5.417800428004527,
+          "weekly_best_return_pct": 15.046806512005872,
+          "monthly_periods": 6,
+          "monthly_positive_ratio": 0.6666666666666666,
+          "monthly_non_negative_ratio": 0.6666666666666666,
+          "monthly_avg_return_pct": 5.433377445437574,
+          "monthly_median_return_pct": 7.285714780676377,
+          "monthly_std_return_pct": 6.026271287477046,
+          "monthly_worst_return_pct": -3.240305362397633,
+          "monthly_best_return_pct": 12.23522213954158,
+          "yearly_periods": 1,
+          "yearly_positive_ratio": 1.0,
+          "yearly_non_negative_ratio": 1.0,
+          "yearly_avg_return_pct": 36.001650689981865,
+          "yearly_median_return_pct": 36.001650689981865,
+          "yearly_std_return_pct": 0.0,
+          "yearly_worst_return_pct": 36.001650689981865,
+          "yearly_best_return_pct": 36.001650689981865
+        },
+        "rows": [
+          {
+            "symbol": "BTC-USDT",
+            "return_pct": 7.836131207505852,
+            "return_ann_pct": 16.43181073236457,
+            "cagr_pct": 16.530604128972428,
+            "sharpe": 1.2834570374039262,
+            "sortino": 5.860406130819592,
+            "calmar": 5.927515166480046,
+            "max_drawdown_pct": 2.7721246206650063,
+            "win_rate_pct": 41.37931034482759,
+            "payoff_ratio": 3.0291409227114907,
+            "trades": 29
+          },
+          {
+            "symbol": "ETH-USDT",
+            "return_pct": 20.70965625,
+            "return_ann_pct": 46.1634772276128,
+            "cagr_pct": 46.47308721887262,
+            "sharpe": 2.088578127500595,
+            "sortino": 18.49456370751127,
+            "calmar": 13.33505100721971,
+            "max_drawdown_pct": 3.4618148219020317,
+            "win_rate_pct": 50.0,
+            "payoff_ratio": 3.9638307094573975,
+            "trades": 28
+          },
+          {
+            "symbol": "DOGE-USDT",
+            "return_pct": -1.219359375,
+            "return_ann_pct": -2.443690085335193,
+            "cagr_pct": -2.457144785083676,
+            "sharpe": -0.1561287769006247,
+            "sortino": -0.22763268690297814,
+            "calmar": -0.2576543933966522,
+            "max_drawdown_pct": 9.484371887162801,
+            "win_rate_pct": 44.18604651162791,
+            "payoff_ratio": 1.2033840417861938,
+            "trades": 43
+          },
+          {
+            "symbol": "PEPE-USDT",
+            "return_pct": 0.0,
+            "return_ann_pct": 0.0,
+            "cagr_pct": 0.0,
+            "sharpe": 0.0,
+            "sortino": 0.0,
+            "calmar": 0.0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0.0,
+            "payoff_ratio": 0.0,
+            "trades": 0
+          }
+        ]
+      },
+      {
+        "fold": 7,
+        "window": {
+          "calibration": [
+            "2021-06-27T18:35:00+00:00",
+            "2022-06-27T18:34:59+00:00"
+          ],
+          "evaluation": [
+            "2022-06-27T18:35:00+00:00",
+            "2022-12-24T18:34:59+00:00"
+          ]
+        },
+        "portfolio": {
+          "return_pct": 60.15525794848799,
+          "return_ann_pct": 160.0496023655814,
+          "cagr_pct": 160.0496023655814,
+          "sharpe": 3.049214927753889,
+          "sortino": 0.4735965933683996,
+          "calmar": 12.927385017815602,
+          "max_drawdown_pct": 12.380663385906153,
+          "win_rate_pct": 55.714285714285715,
+          "payoff_ratio": 1.9474812433223256,
+          "trades": 140
+        },
+        "stability": {
+          "weekly_periods": 25,
+          "weekly_positive_ratio": 0.52,
+          "weekly_non_negative_ratio": 0.6,
+          "weekly_avg_return_pct": 2.062840707014944,
+          "weekly_median_return_pct": 0.9009028431228083,
+          "weekly_std_return_pct": 5.497149825515017,
+          "weekly_worst_return_pct": -5.517183001851322,
+          "weekly_best_return_pct": 20.14838219287023,
+          "monthly_periods": 6,
+          "monthly_positive_ratio": 0.6666666666666666,
+          "monthly_non_negative_ratio": 0.6666666666666666,
+          "monthly_avg_return_pct": 8.697278752806074,
+          "monthly_median_return_pct": 10.858353034912316,
+          "monthly_std_return_pct": 10.646621326744524,
+          "monthly_worst_return_pct": -6.246137826407483,
+          "monthly_best_return_pct": 23.397004805074584,
+          "yearly_periods": 0,
+          "yearly_positive_ratio": 0.0,
+          "yearly_non_negative_ratio": 0.0,
+          "yearly_avg_return_pct": 0.0,
+          "yearly_median_return_pct": 0.0,
+          "yearly_std_return_pct": 0.0,
+          "yearly_worst_return_pct": 0.0,
+          "yearly_best_return_pct": 0.0
+        },
+        "rows": [
+          {
+            "symbol": "BTC-USDT",
+            "return_pct": -0.6817256421798374,
+            "return_ann_pct": -1.3699871016891518,
+            "cagr_pct": -1.3775718663150194,
+            "sharpe": -0.46156175394992854,
+            "sortino": -0.6861657068380944,
+            "calmar": -0.4899630746395767,
+            "max_drawdown_pct": 2.7961027526348436,
+            "win_rate_pct": 29.411764705882355,
+            "payoff_ratio": 1.9583735453328333,
+            "trades": 17
+          },
+          {
+            "symbol": "ETH-USDT",
+            "return_pct": 8.292453125,
+            "return_ann_pct": 17.42750522654928,
+            "cagr_pct": 17.532722959081305,
+            "sharpe": 0.7682475204924134,
+            "sortino": 2.2680306902765204,
+            "calmar": 2.011466974148322,
+            "max_drawdown_pct": 8.664077238418633,
+            "win_rate_pct": 41.81818181818181,
+            "payoff_ratio": 1.914338231086731,
+            "trades": 55
+          },
+          {
+            "symbol": "DOGE-USDT",
+            "return_pct": 61.38240625,
+            "return_ann_pct": 162.51704280901964,
+            "cagr_pct": 163.93336017495082,
+            "sharpe": 1.6745368213665213,
+            "sortino": 13.303639959719158,
+            "calmar": 10.373670654909473,
+            "max_drawdown_pct": 15.666300600367178,
+            "win_rate_pct": 51.66666666666667,
+            "payoff_ratio": 2.437239646911621,
+            "trades": 60
+          },
+          {
+            "symbol": "PEPE-USDT",
+            "return_pct": 0.0,
+            "return_ann_pct": 0.0,
+            "cagr_pct": 0.0,
+            "sharpe": 0.0,
+            "sortino": 0.0,
+            "calmar": 0.0,
+            "max_drawdown_pct": 0.0,
+            "win_rate_pct": 0.0,
+            "payoff_ratio": 0.0,
+            "trades": 0
+          }
+        ]
+      },
+      {
+        "fold": 8,
+        "window": {
+          "calibration": [
+            "2021-12-24T18:35:00+00:00",
+            "2022-12-24T18:34:59+00:00"
+          ],
+          "evaluation": [
+            "2022-12-24T18:35:00+00:00",
+            "2023-06-22T18:34:59+00:00"
+          ]
+        },
+        "portfolio": {
+          "return_pct": 44.48796708245912,
+          "return_ann_pct": 111.02376880031737,
+          "cagr_pct": 111.02376880031737,
+          "sharpe": 2.346099789838358,
+          "sortino": 0.43923040977143885,
+          "calmar": 13.070634947042713,
+          "max_drawdown_pct": 8.49413737359691,
+          "win_rate_pct": 43.66197183098591,
+          "payoff_ratio": 4.762836273758771,
+          "trades": 71
+        },
+        "stability": {
+          "weekly_periods": 26,
+          "weekly_positive_ratio": 0.38461538461538464,
+          "weekly_non_negative_ratio": 0.6538461538461539,
+          "weekly_avg_return_pct": 1.5284590898614971,
+          "weekly_median_return_pct": 0.0,
+          "weekly_std_return_pct": 4.737973471564703,
+          "weekly_worst_return_pct": -2.9998733258598587,
+          "weekly_best_return_pct": 19.08628050346688,
+          "monthly_periods": 6,
+          "monthly_positive_ratio": 0.6666666666666666,
+          "monthly_non_negative_ratio": 0.6666666666666666,
+          "monthly_avg_return_pct": 6.8724753546989445,
+          "monthly_median_return_pct": 4.51722205798224,
+          "monthly_std_return_pct": 10.880502862743105,
+          "monthly_worst_return_pct": -8.03386969259573,
+          "monthly_best_return_pct": 23.859644938358638,
+          "yearly_periods": 1,
+          "yearly_positive_ratio": 1.0,
+          "yearly_non_negative_ratio": 1.0,
+          "yearly_avg_return_pct": 44.48796708245912,
+          "yearly_median_return_pct": 44.48796708245912,
+          "yearly_std_return_pct": 0.0,
+          "yearly_worst_return_pct": 44.48796708245912,
+          "yearly_best_return_pct": 44.48796708245912
+        },
+        "rows": [
+          {
+            "symbol": "BTC-USDT",
+            "return_pct": 1.7506466612700462,
+            "return_ann_pct": 3.5617263957937073,
+            "cagr_pct": 3.581934316436719,
+            "sharpe": 0.8185390351871963,
+            "sortino": 2.3065211063160955,
+            "calmar": 0.5508603070033815,
+            "max_drawdown_pct": 6.465752479370135,
+            "win_rate_pct": 42.857142857142854,
+            "payoff_ratio": 2.392021576611367,
+            "trades": 14
+          },
+          {
+            "symbol": "ETH-USDT",
+            "return_pct": 21.1922109375,
+            "return_ann_pct": 47.34417643509503,
+            "cagr_pct": 47.66291044116598,
+            "sharpe": 1.8109314584006249,
+            "sortino": 19.01172631362777,
+            "calmar": 11.940215326617999,
+            "max_drawdown_pct": 3.9651023989116796,
+            "win_rate_pct": 57.14285714285714,
+            "payoff_ratio": 6.077144145965576,
+            "trades": 14
+          },
+          {
+            "symbol": "DOGE-USDT",
+            "return_pct": 2.5100781249999997,
+            "return_ann_pct": 5.126348652860657,
+            "cagr_pct": 5.155652217591644,
+            "sharpe": 0.2747059414474162,
+            "sortino": 0.529833677179927,
+            "calmar": 0.3984855626861573,
+            "max_drawdown_pct": 12.864578125000003,
+            "win_rate_pct": 34.48275862068966,
+            "payoff_ratio": 2.165076732635498,
+            "trades": 29
+          },
+          {
+            "symbol": "PEPE-USDT",
+            "return_pct": 21.019,
+            "return_ann_pct": 272.0448279163884,
+            "cagr_pct": 277.7241043022612,
+            "sharpe": 1.644669446286664,
+            "sortino": 114.43513285743492,
+            "calmar": 193.97784001970678,
+            "max_drawdown_pct": 1.4024531250000027,
+            "win_rate_pct": 37.5,
+            "payoff_ratio": 22.134347915649414,
+            "trades": 8
+          }
+        ]
+      },
+      {
+        "fold": 9,
+        "window": {
+          "calibration": [
+            "2022-06-22T18:35:00+00:00",
+            "2023-06-22T18:34:59+00:00"
+          ],
+          "evaluation": [
+            "2023-06-22T18:35:00+00:00",
+            "2023-12-19T18:34:59+00:00"
+          ]
+        },
+        "portfolio": {
+          "return_pct": 123.23085674409042,
+          "return_ann_pct": 410.1455490788891,
+          "cagr_pct": 410.1455490788891,
+          "sharpe": 3.536253128798004,
+          "sortino": 0.7416788229973023,
+          "calmar": 31.763374747927436,
+          "max_drawdown_pct": 12.91253062162896,
+          "win_rate_pct": 42.3728813559322,
+          "payoff_ratio": 3.7667292478496477,
+          "trades": 118
+        },
+        "stability": {
+          "weekly_periods": 26,
+          "weekly_positive_ratio": 0.46153846153846156,
+          "weekly_non_negative_ratio": 0.6538461538461539,
+          "weekly_avg_return_pct": 3.5190297241367174,
+          "weekly_median_return_pct": 0.0,
+          "weekly_std_return_pct": 7.737803018583558,
+          "weekly_worst_return_pct": -6.528005222540001,
+          "weekly_best_return_pct": 27.856895972404505,
+          "monthly_periods": 6,
+          "monthly_positive_ratio": 0.8333333333333334,
+          "monthly_non_negative_ratio": 0.8333333333333334,
+          "monthly_avg_return_pct": 15.25057581397495,
+          "monthly_median_return_pct": 7.59990451773721,
+          "monthly_std_return_pct": 20.112311166261474,
+          "monthly_worst_return_pct": -7.727499663461246,
+          "monthly_best_return_pct": 51.71779857770309,
+          "yearly_periods": 0,
+          "yearly_positive_ratio": 0.0,
+          "yearly_non_negative_ratio": 0.0,
+          "yearly_avg_return_pct": 0.0,
+          "yearly_median_return_pct": 0.0,
+          "yearly_std_return_pct": 0.0,
+          "yearly_worst_return_pct": 0.0,
+          "yearly_best_return_pct": 0.0
+        },
+        "rows": [
+          {
+            "symbol": "BTC-USDT",
+            "return_pct": 0.49778955183002105,
+            "return_ann_pct": 1.0063697200777266,
+            "cagr_pct": 1.012008478357207,
+            "sharpe": 0.6273396628740802,
+            "sortino": 1.3076673557523313,
+            "calmar": 0.7436985349075804,
+            "max_drawdown_pct": 1.3531957814099882,
+            "win_rate_pct": 42.857142857142854,
+            "payoff_ratio": 2.0504941166334887,
+            "trades": 7
+          },
+          {
+            "symbol": "ETH-USDT",
+            "return_pct": 5.9838828125,
+            "return_ann_pct": 12.43408557171406,
+            "cagr_pct": 12.507570359313647,
+            "sharpe": 1.2999780135304222,
+            "sortino": 4.06522504426524,
+            "calmar": 5.285930783094994,
+            "max_drawdown_pct": 2.3522982199236653,
+            "win_rate_pct": 54.54545454545454,
+            "payoff_ratio": 2.0586302280426025,
+            "trades": 11
+          },
+          {
+            "symbol": "DOGE-USDT",
+            "return_pct": 44.939984375,
+            "return_ann_pct": 111.37228783911723,
+            "cagr_pct": 112.2560978281701,
+            "sharpe": 1.5668814374257094,
+            "sortino": 9.983293229140639,
+            "calmar": 13.388213286022886,
+            "max_drawdown_pct": 8.318681922657179,
+            "win_rate_pct": 43.75,
+            "payoff_ratio": 3.396846294403076,
+            "trades": 32
+          },
+          {
+            "symbol": "PEPE-USDT",
+            "return_pct": 21.153140625,
+            "return_ann_pct": 47.24840229285749,
+            "cagr_pct": 47.566394204442865,
+            "sharpe": 0.9454700758071932,
+            "sortino": 3.2946784896745434,
+            "calmar": 3.1021070361578804,
+            "max_drawdown_pct": 15.231067704026447,
+            "win_rate_pct": 33.33333333333333,
+            "payoff_ratio": 2.8490326404571533,
+            "trades": 60
+          }
+        ]
+      },
+      {
+        "fold": 10,
+        "window": {
+          "calibration": [
+            "2022-12-19T18:35:00+00:00",
+            "2023-12-19T18:34:59+00:00"
+          ],
+          "evaluation": [
+            "2023-12-19T18:35:00+00:00",
+            "2024-06-16T18:34:59+00:00"
+          ]
+        },
+        "portfolio": {
+          "return_pct": 325.05762514899834,
+          "return_ann_pct": 1784.7335020927264,
+          "cagr_pct": 1784.7335020927264,
+          "sharpe": 4.720286720465278,
+          "sortino": 1.378286635037298,
+          "calmar": 137.50670435136138,
+          "max_drawdown_pct": 12.979247161158924,
+          "win_rate_pct": 54.32692307692307,
+          "payoff_ratio": 2.0412929379584197,
+          "trades": 208
+        },
+        "stability": {
+          "weekly_periods": 25,
+          "weekly_positive_ratio": 0.6,
+          "weekly_non_negative_ratio": 0.6,
+          "weekly_avg_return_pct": 7.170434241851069,
+          "weekly_median_return_pct": 1.007180507771599,
+          "weekly_std_return_pct": 18.74368968445286,
+          "weekly_worst_return_pct": -5.246223056297694,
+          "weekly_best_return_pct": 90.3978586060281,
+          "monthly_periods": 6,
+          "monthly_positive_ratio": 0.8333333333333334,
+          "monthly_non_negative_ratio": 0.8333333333333334,
+          "monthly_avg_return_pct": 31.335267942417246,
+          "monthly_median_return_pct": 27.38445174110057,
+          "monthly_std_return_pct": 36.96549131613491,
+          "monthly_worst_return_pct": -4.455393302202371,
+          "monthly_best_return_pct": 108.4162397821288,
+          "yearly_periods": 1,
+          "yearly_positive_ratio": 1.0,
+          "yearly_non_negative_ratio": 1.0,
+          "yearly_avg_return_pct": 318.406356271044,
+          "yearly_median_return_pct": 318.406356271044,
+          "yearly_std_return_pct": 0.0,
+          "yearly_worst_return_pct": 318.406356271044,
+          "yearly_best_return_pct": 318.406356271044
+        },
+        "rows": [
+          {
+            "symbol": "BTC-USDT",
+            "return_pct": 6.4103013415077,
+            "return_ann_pct": 13.348189958287016,
+            "cagr_pct": 13.427392396196502,
+            "sharpe": 1.0440063593409827,
+            "sortino": 5.116923055717601,
+            "calmar": 5.089991011549331,
+            "max_drawdown_pct": 2.622438807455574,
+            "win_rate_pct": 47.05882352941176,
+            "payoff_ratio": 3.2768107556484476,
+            "trades": 17
+          },
+          {
+            "symbol": "ETH-USDT",
+            "return_pct": 21.6526796875,
+            "return_ann_pct": 48.475301565388264,
+            "cagr_pct": 48.802826355476704,
+            "sharpe": 1.6721941970418261,
+            "sortino": 7.969912058729917,
+            "calmar": 8.205131173615872,
+            "max_drawdown_pct": 5.9079252408863026,
+            "win_rate_pct": 44.18604651162791,
+            "payoff_ratio": 2.9790544509887695,
+            "trades": 43
+          },
+          {
+            "symbol": "DOGE-USDT",
+            "return_pct": -21.468773437499998,
+            "return_ann_pct": -38.57500465118573,
+            "cagr_pct": -38.741668136681106,
+            "sharpe": -2.554960075903294,
+            "sortino": -2.0914927647063215,
+            "calmar": -0.9800763142908279,
+            "max_drawdown_pct": 39.35918467644856,
+            "win_rate_pct": 38.775510204081634,
+            "payoff_ratio": 1.0107851028442383,
+            "trades": 49
+          },
+          {
+            "symbol": "PEPE-USDT",
+            "return_pct": 214.72487500000003,
+            "return_ann_pct": 909.5204957360608,
+            "cagr_pct": 922.6170644667089,
+            "sharpe": 1.2498040773533592,
+            "sortino": 68.30410015005366,
+            "calmar": 94.13068088220668,
+            "max_drawdown_pct": 9.662317187253933,
+            "win_rate_pct": 55.69620253164557,
+            "payoff_ratio": 2.5483555793762207,
+            "trades": 79
+          }
+        ]
+      },
+      {
+        "fold": 11,
+        "window": {
+          "calibration": [
+            "2023-06-17T18:35:00+00:00",
+            "2024-06-16T18:34:59+00:00"
+          ],
+          "evaluation": [
+            "2024-06-16T18:35:00+00:00",
+            "2024-12-13T18:34:59+00:00"
+          ]
+        },
+        "portfolio": {
+          "return_pct": 291.53155741053547,
+          "return_ann_pct": 1495.3125352435384,
+          "cagr_pct": 1495.3125352435384,
+          "sharpe": 5.302626289017316,
+          "sortino": 1.2132321696431672,
+          "calmar": 143.73129509832003,
+          "max_drawdown_pct": 10.403527876240615,
+          "win_rate_pct": 54.980079681274894,
+          "payoff_ratio": 2.2999746126299794,
+          "trades": 251
+        },
+        "stability": {
+          "weekly_periods": 26,
+          "weekly_positive_ratio": 0.5384615384615384,
+          "weekly_non_negative_ratio": 0.6923076923076923,
+          "weekly_avg_return_pct": 5.865744558947126,
+          "weekly_median_return_pct": 1.2047570587716439,
+          "weekly_std_return_pct": 10.543097017190926,
+          "weekly_worst_return_pct": -5.224278407540117,
+          "weekly_best_return_pct": 39.87971304418873,
+          "monthly_periods": 6,
+          "monthly_positive_ratio": 1.0,
+          "monthly_non_negative_ratio": 1.0,
+          "monthly_avg_return_pct": 29.81729652858861,
+          "monthly_median_return_pct": 18.94754465086922,
+          "monthly_std_return_pct": 37.024441882232864,
+          "monthly_worst_return_pct": 0.5481802718837914,
+          "monthly_best_return_pct": 110.44131331789573,
+          "yearly_periods": 0,
+          "yearly_positive_ratio": 0.0,
+          "yearly_non_negative_ratio": 0.0,
+          "yearly_avg_return_pct": 0.0,
+          "yearly_median_return_pct": 0.0,
+          "yearly_std_return_pct": 0.0,
+          "yearly_worst_return_pct": 0.0,
+          "yearly_best_return_pct": 0.0
+        },
+        "rows": [
+          {
+            "symbol": "BTC-USDT",
+            "return_pct": 9.577031818638847,
+            "return_ann_pct": 20.253409689517564,
+            "cagr_pct": 20.377117186398984,
+            "sharpe": 0.8198515904047686,
+            "sortino": 3.632476442661179,
+            "calmar": 3.924831205694805,
+            "max_drawdown_pct": 5.160326298906948,
+            "win_rate_pct": 54.166666666666664,
+            "payoff_ratio": 1.83177131623628,
+            "trades": 24
+          },
+          {
+            "symbol": "ETH-USDT",
+            "return_pct": 51.157734375,
+            "return_ann_pct": 130.05661842274517,
+            "cagr_pct": 131.12767126005437,
+            "sharpe": 2.2449787099281666,
+            "sortino": 27.91520939650552,
+            "calmar": 27.939465483804646,
+            "max_drawdown_pct": 4.654942969404107,
+            "win_rate_pct": 60.0,
+            "payoff_ratio": 3.824829339981079,
+            "trades": 45
+          },
+          {
+            "symbol": "DOGE-USDT",
+            "return_pct": 106.32209375,
+            "return_ann_pct": 330.82900900982867,
+            "cagr_pct": 334.35133264106065,
+            "sharpe": 1.0035657909563604,
+            "sortino": 15.522412967848958,
+            "calmar": 26.44350557128788,
+            "max_drawdown_pct": 12.510784854828017,
+            "win_rate_pct": 51.06382978723404,
+            "payoff_ratio": 2.265206813812256,
+            "trades": 94
+          },
+          {
+            "symbol": "PEPE-USDT",
+            "return_pct": 88.525046875,
+            "return_ann_pct": 259.1718097228368,
+            "cagr_pct": 261.741243318677,
+            "sharpe": 1.6778132104287748,
+            "sortino": 23.65551789336762,
+            "calmar": 31.274906671402178,
+            "max_drawdown_pct": 8.286893145546104,
+            "win_rate_pct": 48.61111111111111,
+            "payoff_ratio": 2.672941207885742,
+            "trades": 72
+          }
+        ]
+      },
+      {
+        "fold": 12,
+        "window": {
+          "calibration": [
+            "2023-12-14T18:35:00+00:00",
+            "2024-12-13T18:34:59+00:00"
+          ],
+          "evaluation": [
+            "2024-12-13T18:35:00+00:00",
+            "2025-03-29T18:34:59+00:00"
+          ]
+        },
+        "portfolio": {
+          "return_pct": 84.48690389458804,
+          "return_ann_pct": 725.0533719973482,
+          "cagr_pct": 725.0533719973482,
+          "sharpe": 5.382275854530929,
+          "sortino": 1.137657075264451,
+          "calmar": 122.26809319727745,
+          "max_drawdown_pct": 5.930029274501624,
+          "win_rate_pct": 56.666666666666664,
+          "payoff_ratio": 3.710295589674524,
+          "trades": 90
+        },
+        "stability": {
+          "weekly_periods": 15,
+          "weekly_positive_ratio": 0.6666666666666666,
+          "weekly_non_negative_ratio": 0.7333333333333333,
+          "weekly_avg_return_pct": 4.282796288641445,
+          "weekly_median_return_pct": 3.003381237212066,
+          "weekly_std_return_pct": 4.97927977310983,
+          "weekly_worst_return_pct": -1.357501252269755,
+          "weekly_best_return_pct": 15.3223816005138,
+          "monthly_periods": 3,
+          "monthly_positive_ratio": 1.0,
+          "monthly_non_negative_ratio": 1.0,
+          "monthly_avg_return_pct": 21.361159214117873,
+          "monthly_median_return_pct": 22.514063894739998,
+          "monthly_std_return_pct": 11.19432494844488,
+          "monthly_worst_return_pct": 7.110919005219962,
+          "monthly_best_return_pct": 34.45849474239366,
+          "yearly_periods": 1,
+          "yearly_positive_ratio": 1.0,
+          "yearly_non_negative_ratio": 1.0,
+          "yearly_avg_return_pct": 76.44442329712247,
+          "yearly_median_return_pct": 76.44442329712247,
+          "yearly_std_return_pct": 0.0,
+          "yearly_worst_return_pct": 76.44442329712247,
+          "yearly_best_return_pct": 76.44442329712247
+        },
+        "rows": [
+          {
+            "symbol": "BTC-USDT",
+            "return_pct": 14.136905194990149,
+            "return_ann_pct": 56.99750316452554,
+            "cagr_pct": 57.66934662580976,
+            "sharpe": 1.5056321270406874,
+            "sortino": 68.48456499157403,
+            "calmar": 17.935535103538367,
+            "max_drawdown_pct": 3.1779092642338247,
+            "win_rate_pct": 56.25,
+            "payoff_ratio": 10.499343996690843,
+            "trades": 16
+          },
+          {
+            "symbol": "ETH-USDT",
+            "return_pct": 5.578375,
+            "return_ann_pct": 20.34257542213409,
+            "cagr_pct": 20.553724760227098,
+            "sharpe": 1.2787447108503764,
+            "sortino": 9.264553785737517,
+            "calmar": 8.696050231019022,
+            "max_drawdown_pct": 2.3392890889212703,
+            "win_rate_pct": 46.15384615384615,
+            "payoff_ratio": 3.1453590393066406,
+            "trades": 13
+          },
+          {
+            "symbol": "DOGE-USDT",
+            "return_pct": 37.373765625,
+            "return_ann_pct": 195.4061381942538,
+            "cagr_pct": 198.4509670759521,
+            "sharpe": 2.2811713686790513,
+            "sortino": 32.85429056098758,
+            "calmar": 52.2850713104434,
+            "max_drawdown_pct": 3.7373218262250596,
+            "win_rate_pct": 56.00000000000001,
+            "payoff_ratio": 3.715468168258667,
+            "trades": 25
+          },
+          {
+            "symbol": "PEPE-USDT",
+            "return_pct": 19.289960937500002,
+            "return_ann_pct": 82.5207971138238,
+            "cagr_pct": 83.56344873159946,
+            "sharpe": 2.5238938883944004,
+            "sortino": 17.25628542649447,
+            "calmar": 12.198430168655255,
+            "max_drawdown_pct": 6.764870231078335,
+            "win_rate_pct": 69.23076923076923,
+            "payoff_ratio": 1.6395469903945923,
+            "trades": 26
+          }
+        ]
+      }
+    ]
+  },
+  "best_holdout": {
+    "aggregate": {
+      "objective": 295.3343037006208,
+      "avg_ann_pct": 43.72944176706843,
+      "avg_cagr_pct": 43.8861552091589,
+      "worst_dd_pct": 11.722528507634888,
+      "total_trades": 289,
+      "portfolio_return_ann_pct": 151.4711246500247,
+      "portfolio_cagr_pct": 151.4711246500247,
+      "portfolio_max_drawdown_pct": 10.411585928831958,
+      "portfolio_trades": 316,
+      "positive_symbols": 3,
+      "avg_payoff_ratio": 1.539166865573849,
+      "weekly_periods": 52,
+      "weekly_positive_ratio": 0.38461538461538464,
+      "weekly_non_negative_ratio": 0.4807692307692308,
+      "weekly_avg_return_pct": 1.9504484545097398,
+      "weekly_median_return_pct": -0.06490638192746534,
+      "weekly_std_return_pct": 5.95167449379161,
+      "weekly_worst_return_pct": -4.332932648267029,
+      "weekly_best_return_pct": 22.13995869507808,
+      "monthly_periods": 12,
+      "monthly_positive_ratio": 0.5833333333333334,
+      "monthly_non_negative_ratio": 0.5833333333333334,
+      "monthly_avg_return_pct": 9.032334754850963,
+      "monthly_median_return_pct": 3.3458392479434718,
+      "monthly_std_return_pct": 15.790648940055721,
+      "monthly_worst_return_pct": -5.313230192905061,
+      "monthly_best_return_pct": 39.58811267181057,
+      "yearly_periods": 1,
+      "yearly_positive_ratio": 0.0,
+      "yearly_non_negative_ratio": 0.0,
+      "yearly_avg_return_pct": -0.0967165489665689,
+      "yearly_median_return_pct": -0.0967165489665689,
+      "yearly_std_return_pct": 0.0,
+      "yearly_worst_return_pct": -0.0967165489665689,
+      "yearly_best_return_pct": -0.0967165489665689
+    },
+    "portfolio": {
+      "return_pct": 151.31245049777527,
+      "return_ann_pct": 151.4711246500247,
+      "cagr_pct": 151.4711246500247,
+      "sharpe": 3.0477663858686332,
+      "sortino": 0.5735845783829483,
+      "calmar": 14.548323923502187,
+      "max_drawdown_pct": 10.411585928831958,
+      "win_rate_pct": 54.11392405063291,
+      "payoff_ratio": 1.8461317119760121,
+      "trades": 316
+    },
+    "stability": {
+      "weekly_periods": 52,
+      "weekly_positive_ratio": 0.38461538461538464,
+      "weekly_non_negative_ratio": 0.4807692307692308,
+      "weekly_avg_return_pct": 1.9504484545097398,
+      "weekly_median_return_pct": -0.06490638192746534,
+      "weekly_std_return_pct": 5.95167449379161,
+      "weekly_worst_return_pct": -4.332932648267029,
+      "weekly_best_return_pct": 22.13995869507808,
+      "monthly_periods": 12,
+      "monthly_positive_ratio": 0.5833333333333334,
+      "monthly_non_negative_ratio": 0.5833333333333334,
+      "monthly_avg_return_pct": 9.032334754850963,
+      "monthly_median_return_pct": 3.3458392479434718,
+      "monthly_std_return_pct": 15.790648940055721,
+      "monthly_worst_return_pct": -5.313230192905061,
+      "monthly_best_return_pct": 39.58811267181057,
+      "yearly_periods": 1,
+      "yearly_positive_ratio": 0.0,
+      "yearly_non_negative_ratio": 0.0,
+      "yearly_avg_return_pct": -0.0967165489665689,
+      "yearly_median_return_pct": -0.0967165489665689,
+      "yearly_std_return_pct": 0.0,
+      "yearly_worst_return_pct": -0.0967165489665689,
+      "yearly_best_return_pct": -0.0967165489665689
+    },
+    "rows": [
+      {
+        "symbol": "BTC-USDT",
+        "return_pct": -3.913186488929874,
+        "return_ann_pct": -3.90270612883149,
+        "cagr_pct": -3.914683062772739,
+        "sharpe": -2.9620118523320627,
+        "sortino": -2.876331807571374,
+        "calmar": -0.9973217836338661,
+        "max_drawdown_pct": 3.913186488929876,
+        "win_rate_pct": 23.076923076923077,
+        "payoff_ratio": 0.45564567179094057,
+        "trades": 26
+      },
+      {
+        "symbol": "ETH-USDT",
+        "return_pct": 40.812031250000004,
+        "return_ann_pct": 40.68041596519738,
+        "cagr_pct": 40.81661639940839,
+        "sharpe": 1.597698989703253,
+        "sortino": 5.748052608805236,
+        "calmar": 4.500738361257287,
+        "max_drawdown_pct": 9.038609379158235,
+        "win_rate_pct": 49.45054945054945,
+        "payoff_ratio": 2.1921284198760986,
+        "trades": 91
+      },
+      {
+        "symbol": "DOGE-USDT",
+        "return_pct": 38.137390625,
+        "return_ann_pct": 38.01550663269537,
+        "cagr_pct": 38.13739062499999,
+        "sharpe": 1.2567841591207374,
+        "sortino": 4.228002220310699,
+        "calmar": 4.25790239826238,
+        "max_drawdown_pct": 8.928224058919065,
+        "win_rate_pct": 51.61290322580645,
+        "payoff_ratio": 1.7626934051513672,
+        "trades": 93
+      },
+      {
+        "symbol": "PEPE-USDT",
+        "return_pct": 100.505296875,
+        "return_ann_pct": 100.12455059921245,
+        "cagr_pct": 100.50529687499998,
+        "sharpe": 1.5010569963122125,
+        "sortino": 12.436318791439648,
+        "calmar": 8.54120768689121,
+        "max_drawdown_pct": 11.722528507634888,
+        "win_rate_pct": 60.75949367088608,
+        "payoff_ratio": 1.7461999654769897,
+        "trades": 79
+      }
+    ],
+    "window": {
+      "calibration": [
+        "2024-03-29T18:35:00+00:00",
+        "2025-03-29T18:34:59+00:00"
+      ],
+      "evaluation": [
+        "2025-03-29T18:35:00+00:00",
+        "2026-03-29T18:35:00+00:00"
+      ]
+    }
+  },
+  "best_test": {
+    "aggregate": {
+      "objective": 556.9423696620318,
+      "avg_ann_pct": 80.33266628699833,
+      "avg_cagr_pct": 80.3898123807699,
+      "worst_dd_pct": 40.99134631369456,
+      "total_trades": 1978,
+      "portfolio_return_ann_pct": 287.6404037701227,
+      "portfolio_cagr_pct": 287.6404037701227,
+      "portfolio_max_drawdown_pct": 19.93311805243474,
+      "portfolio_trades": 2164,
+      "positive_symbols": 4,
+      "avg_payoff_ratio": 2.4256024987986073,
+      "weekly_periods": 350,
+      "weekly_positive_ratio": 0.48857142857142855,
+      "weekly_non_negative_ratio": 0.5971428571428572,
+      "weekly_avg_return_pct": 2.901364910500845,
+      "weekly_median_return_pct": 0.0,
+      "weekly_std_return_pct": 8.14119901609368,
+      "weekly_worst_return_pct": -12.889103921834455,
+      "weekly_best_return_pct": 90.39785860602794,
+      "monthly_periods": 80,
+      "monthly_positive_ratio": 0.75,
+      "monthly_non_negative_ratio": 0.75,
+      "monthly_avg_return_pct": 13.760155098819968,
+      "monthly_median_return_pct": 6.41425957771321,
+      "monthly_std_return_pct": 21.601258901118523,
+      "monthly_worst_return_pct": -8.92687799374512,
+      "monthly_best_return_pct": 110.44131331789569,
+      "yearly_periods": 7,
+      "yearly_positive_ratio": 0.8571428571428571,
+      "yearly_non_negative_ratio": 0.8571428571428571,
+      "yearly_avg_return_pct": 418.68456728851436,
+      "yearly_median_return_pct": 227.6690670555376,
+      "yearly_std_return_pct": 512.3619693273548,
+      "yearly_worst_return_pct": -0.0967165489666133,
+      "yearly_best_return_pct": 1612.8630913979464
+    },
+    "portfolio": {
+      "return_pct": 888357.6739312746,
+      "return_ann_pct": 287.6404037701227,
+      "cagr_pct": 287.6404037701227,
+      "sharpe": 3.417057938830673,
+      "sortino": 0.6363039223671676,
+      "calmar": 14.43027643811043,
+      "max_drawdown_pct": 19.93311805243474,
+      "win_rate_pct": 53.14232902033271,
+      "payoff_ratio": 2.131263939458504,
+      "trades": 2164
+    },
+    "stability": {
+      "weekly_periods": 350,
+      "weekly_positive_ratio": 0.48857142857142855,
+      "weekly_non_negative_ratio": 0.5971428571428572,
+      "weekly_avg_return_pct": 2.901364910500845,
+      "weekly_median_return_pct": 0.0,
+      "weekly_std_return_pct": 8.14119901609368,
+      "weekly_worst_return_pct": -12.889103921834455,
+      "weekly_best_return_pct": 90.39785860602794,
+      "monthly_periods": 80,
+      "monthly_positive_ratio": 0.75,
+      "monthly_non_negative_ratio": 0.75,
+      "monthly_avg_return_pct": 13.760155098819968,
+      "monthly_median_return_pct": 6.41425957771321,
+      "monthly_std_return_pct": 21.601258901118523,
+      "monthly_worst_return_pct": -8.92687799374512,
+      "monthly_best_return_pct": 110.44131331789569,
+      "yearly_periods": 7,
+      "yearly_positive_ratio": 0.8571428571428571,
+      "yearly_non_negative_ratio": 0.8571428571428571,
+      "yearly_avg_return_pct": 418.68456728851436,
+      "yearly_median_return_pct": 227.6690670555376,
+      "yearly_std_return_pct": 512.3619693273548,
+      "yearly_worst_return_pct": -0.0967165489666133,
+      "yearly_best_return_pct": 1612.8630913979464
+    },
+    "rows": [
+      {
+        "symbol": "BTC-USDT",
+        "return_pct": 133.6664928685924,
+        "return_ann_pct": 13.466734560961147,
+        "cagr_pct": 13.473416552058826,
+        "sharpe": 0.942819099991943,
+        "sortino": 3.341532521224428,
+        "calmar": 1.64694697327214,
+        "max_drawdown_pct": 8.176786975846317,
+        "win_rate_pct": 42.934782608695656,
+        "payoff_ratio": 2.6178525811395583,
+        "trades": 368
+      },
+      {
+        "symbol": "ETH-USDT",
+        "return_pct": 3226.0554999999995,
+        "return_ann_pct": 68.48121838716867,
+        "cagr_pct": 68.518326473186,
+        "sharpe": 1.8524367516999147,
+        "sortino": 10.538857264199365,
+        "calmar": 5.65796099083089,
+        "max_drawdown_pct": 12.103515471058767,
+        "win_rate_pct": 50.73409461663948,
+        "payoff_ratio": 2.589442253112793,
+        "trades": 613
+      },
+      {
+        "symbol": "DOGE-USDT",
+        "return_pct": 1761.289375,
+        "return_ann_pct": 54.67078324420673,
+        "cagr_pct": 54.6872517448947,
+        "sharpe": 1.0864137304726595,
+        "sortino": 4.001302110992541,
+        "calmar": 1.3337152389635492,
+        "max_drawdown_pct": 40.99134631369456,
+        "win_rate_pct": 48.439821693907874,
+        "payoff_ratio": 1.9624518156051636,
+        "trades": 673
+      },
+      {
+        "symbol": "PEPE-USDT",
+        "return_pct": 2011.65825,
+        "return_ann_pct": 184.7119289556568,
+        "cagr_pct": 184.88025475294006,
+        "sharpe": 1.5238177694660453,
+        "sortino": 17.61250610798457,
+        "calmar": 12.127322901834633,
+        "max_drawdown_pct": 15.231055563607809,
+        "win_rate_pct": 51.85185185185185,
+        "payoff_ratio": 2.532663345336914,
+        "trades": 324
+      }
+    ]
+  }
+}

@@ -1,0 +1,504 @@
+{
+  "generated_at": "2026-03-30T17:39:05.323519+00:00",
+  "requested_source": "okx",
+  "symbols": [
+    "BTC-USDT",
+    "ETH-USDT",
+    "DOGE-USDT",
+    "PEPE-USDT",
+    "SUI-USDT",
+    "SOL-USDT"
+  ],
+  "data_sources": {
+    "BTC-USDT": "okx_cache",
+    "ETH-USDT": "okx_cache",
+    "DOGE-USDT": "okx_cache",
+    "PEPE-USDT": "okx_cache",
+    "SUI-USDT": "okx_cache",
+    "SOL-USDT": "okx"
+  },
+  "history_ranges": {
+    "BTC-USDT": {
+      "lower_bar": {
+        "start": "2018-01-11T11:10:00+00:00",
+        "end": "2026-03-29T15:10:00+00:00",
+        "bars": 863761,
+        "days": 2999.17
+      },
+      "higher_bar": {
+        "start": "2018-01-11T11:00:00+00:00",
+        "end": "2026-03-29T16:00:00+00:00",
+        "bars": 71982,
+        "days": 2999.21
+      }
+    },
+    "ETH-USDT": {
+      "lower_bar": {
+        "start": "2018-01-11T11:10:00+00:00",
+        "end": "2026-03-29T17:45:00+00:00",
+        "bars": 863792,
+        "days": 2999.27
+      },
+      "higher_bar": {
+        "start": "2018-01-11T11:00:00+00:00",
+        "end": "2026-03-29T18:00:00+00:00",
+        "bars": 71984,
+        "days": 2999.29
+      }
+    },
+    "DOGE-USDT": {
+      "lower_bar": {
+        "start": "2019-07-18T08:55:00+00:00",
+        "end": "2026-03-29T19:15:00+00:00",
+        "bars": 704573,
+        "days": 2446.43
+      },
+      "higher_bar": {
+        "start": "2019-07-18T08:00:00+00:00",
+        "end": "2026-03-29T19:00:00+00:00",
+        "bars": 58716,
+        "days": 2446.46
+      }
+    },
+    "PEPE-USDT": {
+      "lower_bar": {
+        "start": "2023-05-01T09:00:00+00:00",
+        "end": "2026-03-29T19:35:00+00:00",
+        "bars": 306272,
+        "days": 1063.44
+      },
+      "higher_bar": {
+        "start": "2023-05-01T09:00:00+00:00",
+        "end": "2026-03-29T19:00:00+00:00",
+        "bars": 25523,
+        "days": 1063.42
+      }
+    },
+    "SUI-USDT": {
+      "lower_bar": {
+        "start": "2023-05-03T12:10:00+00:00",
+        "end": "2026-03-30T16:55:00+00:00",
+        "bars": 305914,
+        "days": 1062.2
+      },
+      "higher_bar": {
+        "start": "2023-05-03T12:00:00+00:00",
+        "end": "2026-03-30T17:00:00+00:00",
+        "bars": 25494,
+        "days": 1062.21
+      }
+    },
+    "SOL-USDT": {
+      "lower_bar": {
+        "start": "2020-09-30T10:00:00+00:00",
+        "end": "2026-03-30T17:15:00+00:00",
+        "bars": 578104,
+        "days": 2007.3
+      },
+      "higher_bar": {
+        "start": "2020-09-30T10:00:00+00:00",
+        "end": "2026-03-30T17:00:00+00:00",
+        "bars": 48176,
+        "days": 2007.29
+      }
+    }
+  },
+  "segments": {
+    "train": [
+      "2018-01-13T23:00:00",
+      "2019-01-14T16:10:00"
+    ],
+    "valid": [
+      "2019-01-14T16:15:00",
+      "2019-07-13T16:10:00"
+    ],
+    "test": [
+      "2019-07-13T16:15:00",
+      "2026-03-30T16:15:00"
+    ]
+  },
+  "requested_test_days": 730,
+  "effective_test_days": 2452,
+  "max_test_window": true,
+  "prediction_horizon": 12,
+  "entry_threshold": 0.0015660318535326452,
+  "exit_threshold": -0.00034763036756816544,
+  "feature_count": 75,
+  "feature_names": [
+    "atr",
+    "atr_pct",
+    "bar_range",
+    "brooks_bull_signal",
+    "brooks_bull_trend_bar",
+    "chan_center_high",
+    "chan_center_low",
+    "chan_fractal_bottom",
+    "chan_fractal_top",
+    "chan_long_confirmation",
+    "chan_stroke_dir",
+    "chan_trend_state",
+    "close",
+    "close_location",
+    "ema_fast",
+    "ema_slow",
+    "h1_atr",
+    "h1_atr_pct",
+    "h1_bar_range",
+    "h1_brooks_bull_signal",
+    "h1_brooks_bull_trend_bar",
+    "h1_chan_center_high",
+    "h1_chan_center_low",
+    "h1_chan_fractal_bottom",
+    "h1_chan_fractal_top",
+    "h1_chan_long_confirmation",
+    "h1_chan_stroke_dir",
+    "h1_chan_trend_state",
+    "h1_close",
+    "h1_close_location",
+    "h1_ema_fast",
+    "h1_ema_slow",
+    "h1_high",
+    "h1_low",
+    "h1_open",
+    "h1_relative_volume",
+    "h1_returns_1",
+    "h1_returns_12",
+    "h1_returns_3",
+    "h1_rolling_high",
+    "h1_rolling_low",
+    "h1_trend_strength",
+    "h1_vol",
+    "h1_volume_mean",
+    "h1_wyckoff_accumulation",
+    "h1_wyckoff_breakout_long",
+    "h1_wyckoff_phase_code",
+    "h1_wyckoff_resistance",
+    "h1_wyckoff_spring",
+    "h1_wyckoff_support",
+    "h1_wyckoff_upthrust",
+    "high",
+    "low",
+    "open",
+    "relative_volume",
+    "returns_1",
+    "returns_12",
+    "returns_3",
+    "rolling_high",
+    "rolling_low",
+    "signal_confidence",
+    "simons_breakout_long",
+    "simons_breakout_score",
+    "trend_filter_long",
+    "trend_strength",
+    "vol",
+    "volume_mean",
+    "wyckoff_accumulation",
+    "wyckoff_breakout_long",
+    "wyckoff_long_context",
+    "wyckoff_phase_code",
+    "wyckoff_resistance",
+    "wyckoff_spring",
+    "wyckoff_support",
+    "wyckoff_upthrust"
+  ],
+  "qlib_parameter_notes": {
+    "prediction_horizon": "Future 5-minute bars used to define LABEL0 as a forward return target.",
+    "test_days": "Minimum out-of-sample test duration measured in calendar days.",
+    "max_test_window": "When enabled, the script expands the test segment to the largest window that still leaves the requested validation and minimum training spans.",
+    "valid_days": "Validation window size immediately before the test window.",
+    "min_train_days": "Minimum in-sample training duration required before validation begins.",
+    "entry_quantile": "Validation-score quantile that a heuristic long signal must exceed to open a trade.",
+    "exit_quantile": "Validation-score quantile below which the model forces an exit or refuses to hold.",
+    "num_boost_round": "Maximum LightGBM trees used by Qlib's LGBModel.",
+    "early_stopping_rounds": "Validation patience before Qlib stops adding new trees."
+  },
+  "parameter_notes": {
+    "data.lower_limit": "Default number of 5-minute candles loaded from the selected market data source. Use 0 to request all available OKX history.",
+    "data.higher_limit": "Default number of 1-hour candles loaded from the selected market data source. Use 0 to request all available OKX history.",
+    "feature.ema_fast": "Fast EMA used to describe short-term directional momentum.",
+    "feature.ema_slow": "Slow EMA used to define the dominant trend filter.",
+    "feature.atr_period": "ATR lookback used for volatility-aware stop placement.",
+    "feature.chan_min_separation": "Minimum candle gap between Chan fractal turning points.",
+    "feature.wyckoff_range_window": "Lookback window for support, resistance, and accumulation range detection.",
+    "signal.simons_breakout_threshold": "Minimum breakout strength score before the Simons proxy turns bullish.",
+    "signal.reward_multiple": "Take-profit multiple applied to the stop-loss distance.",
+    "risk.max_risk_fraction": "Maximum account equity risked on a single trade after Kelly scaling.",
+    "backtest.margin": "Required margin ratio passed to backtesting.py. A value of 0.33 approximates 3x account leverage.",
+    "backtest.spread": "Execution slippage / spread assumption. The portfolio backtest applies it as an adverse price adjustment on every fill.",
+    "backtest.commission": "Trading fee assumption charged on fill notional. Default is 0.05% per side."
+  },
+  "config": {
+    "data": {
+      "symbols": [
+        "BTC-USDT",
+        "ETH-USDT",
+        "DOGE-USDT",
+        "PEPE-USDT",
+        "SUI-USDT",
+        "SOL-USDT"
+      ],
+      "lower_bar": "5m",
+      "higher_bar": "1H",
+      "lower_limit": 0,
+      "higher_limit": 0,
+      "page_size": 300
+    },
+    "feature": {
+      "ema_fast": 20,
+      "ema_slow": 60,
+      "atr_period": 14,
+      "volume_window": 20,
+      "breakout_window": 20,
+      "chan_min_separation": 3,
+      "wyckoff_range_window": 36,
+      "wyckoff_recent_window": 12,
+      "brooks_body_window": 20
+    },
+    "signal": {
+      "simons_breakout_threshold": 0.35,
+      "recent_spring_window": 12,
+      "confidence_threshold": 0.72,
+      "reward_multiple": 2.2,
+      "atr_stop_multiple": 1.6,
+      "min_stop_loss_pct": 0.008,
+      "max_stop_loss_pct": 0.05
+    },
+    "risk": {
+      "kelly_floor": 0.0,
+      "kelly_cap": 0.25,
+      "min_risk_fraction": 0.01,
+      "max_risk_fraction": 0.02,
+      "default_win_rate": 0.48,
+      "default_payoff_ratio": 1.8
+    },
+    "backtest": {
+      "initial_cash": 100000.0,
+      "spread": 0.0002,
+      "commission": 0.0005,
+      "margin": 1.0,
+      "exclusive_orders": false
+    }
+  },
+  "model_metrics": {
+    "valid": {
+      "samples": 103680,
+      "rmse": 0.007742424300049644,
+      "mae": 0.004514060684089964,
+      "pearson_ic": 0.2860977034511423,
+      "spearman_ic": 0.32401875205341013,
+      "directional_accuracy": 0.617409336419753,
+      "positive_prediction_hit_rate": 0.6457921607378129
+    },
+    "test": {
+      "samples": 3303707,
+      "rmse": 0.011119932730805282,
+      "mae": 0.006316910388585184,
+      "pearson_ic": 0.2821591247410948,
+      "spearman_ic": 0.3155044527182063,
+      "directional_accuracy": 0.6083554019772335,
+      "positive_prediction_hit_rate": 0.6229264472709933
+    }
+  },
+  "backtest_results": [
+    {
+      "symbol": "BTC-USDT",
+      "data_source": "okx_cache",
+      "variant": "baseline_test",
+      "entry_signals": 251,
+      "return_pct": -1.9530076892036885,
+      "return_ann_pct": -0.29316680359476877,
+      "cagr_pct": -0.29329163260202185,
+      "sharpe": -0.6889206538312099,
+      "sortino": -0.9215350301566709,
+      "calmar": -0.11245433413079295,
+      "max_drawdown_pct": 2.6069853675341093,
+      "win_rate_pct": 39.21568627450981,
+      "payoff_ratio": 0.8126419469994571,
+      "trades": 51
+    },
+    {
+      "symbol": "BTC-USDT",
+      "data_source": "okx_cache",
+      "variant": "qlib_filtered_test",
+      "entry_signals": 54,
+      "return_pct": 0.3821000597527018,
+      "return_ann_pct": 0.05678640602804208,
+      "cagr_pct": 0.0568106278308278,
+      "sharpe": 0.29372744401838835,
+      "sortino": 0.46419786975518373,
+      "calmar": 0.15360461271890222,
+      "max_drawdown_pct": 0.3696920621255151,
+      "win_rate_pct": 53.84615384615385,
+      "payoff_ratio": 1.3097901928619762,
+      "trades": 26
+    },
+    {
+      "symbol": "ETH-USDT",
+      "data_source": "okx_cache",
+      "variant": "baseline_test",
+      "entry_signals": 485,
+      "return_pct": -4.4216640625,
+      "return_ann_pct": -0.6709349186373226,
+      "cagr_pct": -0.6711906794966582,
+      "sharpe": -0.42733363233602806,
+      "sortino": -0.6787041119192341,
+      "calmar": -0.12163952700550087,
+      "max_drawdown_pct": 5.515763955634101,
+      "win_rate_pct": 34.463276836158194,
+      "payoff_ratio": 1.6400926113128662,
+      "trades": 354
+    },
+    {
+      "symbol": "ETH-USDT",
+      "data_source": "okx_cache",
+      "variant": "qlib_filtered_test",
+      "entry_signals": 348,
+      "return_pct": 19.259390625,
+      "return_ann_pct": 2.656520299318399,
+      "cagr_pct": 2.6575497677583604,
+      "sharpe": 2.210873540094595,
+      "sortino": 6.620260987327495,
+      "calmar": 3.7154713001048494,
+      "max_drawdown_pct": 0.7149887819732137,
+      "win_rate_pct": 59.055118110236215,
+      "payoff_ratio": 2.12172532081604,
+      "trades": 254
+    },
+    {
+      "symbol": "DOGE-USDT",
+      "data_source": "okx_cache",
+      "variant": "baseline_test",
+      "entry_signals": 497,
+      "return_pct": -13.6378671875,
+      "return_ann_pct": -2.1632878369083564,
+      "cagr_pct": -2.1637858880513727,
+      "sharpe": -0.9783001074963159,
+      "sortino": -1.4726894490097462,
+      "calmar": -0.15338267666050795,
+      "max_drawdown_pct": 14.103860253374666,
+      "win_rate_pct": 30.02680965147453,
+      "payoff_ratio": 1.6487782001495361,
+      "trades": 373
+    },
+    {
+      "symbol": "DOGE-USDT",
+      "data_source": "okx_cache",
+      "variant": "qlib_filtered_test",
+      "entry_signals": 359,
+      "return_pct": 9.815671875,
+      "return_ann_pct": 1.4064504971450953,
+      "cagr_pct": 1.4067801621793663,
+      "sharpe": 0.7693927540078545,
+      "sortino": 1.5524533318092404,
+      "calmar": 0.6943303589253582,
+      "max_drawdown_pct": 2.02562149136315,
+      "win_rate_pct": 44.776119402985074,
+      "payoff_ratio": 1.740715503692627,
+      "trades": 268
+    },
+    {
+      "symbol": "PEPE-USDT",
+      "data_source": "okx_cache",
+      "variant": "baseline_test",
+      "entry_signals": 240,
+      "return_pct": 1.5695000000000001,
+      "return_ann_pct": 0.5356573742950843,
+      "cagr_pct": 0.5359397109385045,
+      "sharpe": 0.191961578883489,
+      "sortino": 0.36462986952845294,
+      "calmar": 0.1431489614985159,
+      "max_drawdown_pct": 3.7419578087588,
+      "win_rate_pct": 32.967032967032964,
+      "payoff_ratio": 2.164377450942993,
+      "trades": 182
+    },
+    {
+      "symbol": "PEPE-USDT",
+      "data_source": "okx_cache",
+      "variant": "qlib_filtered_test",
+      "entry_signals": 156,
+      "return_pct": 13.681609375,
+      "return_ann_pct": 4.49710418262621,
+      "cagr_pct": 4.499520617431241,
+      "sharpe": 1.6952538388453866,
+      "sortino": 5.526573816105743,
+      "calmar": 4.26284775090377,
+      "max_drawdown_pct": 1.05495303736165,
+      "win_rate_pct": 47.93388429752066,
+      "payoff_ratio": 2.501857042312622,
+      "trades": 121
+    },
+    {
+      "symbol": "SUI-USDT",
+      "data_source": "okx_cache",
+      "variant": "baseline_test",
+      "entry_signals": 317,
+      "return_pct": 1.1266640625,
+      "return_ann_pct": 0.38543802445520914,
+      "cagr_pct": 0.3857397427365239,
+      "sharpe": 0.15378317437314729,
+      "sortino": 0.2726534291797505,
+      "calmar": 0.11396779849660284,
+      "max_drawdown_pct": 3.38199061085398,
+      "win_rate_pct": 37.16814159292036,
+      "payoff_ratio": 1.7687634229660034,
+      "trades": 226
+    },
+    {
+      "symbol": "SUI-USDT",
+      "data_source": "okx_cache",
+      "variant": "qlib_filtered_test",
+      "entry_signals": 224,
+      "return_pct": 13.7655625,
+      "return_ann_pct": 4.527921098293963,
+      "cagr_pct": 4.531537680650111,
+      "sharpe": 2.0558165297489284,
+      "sortino": 5.468132070289331,
+      "calmar": 4.084995882147829,
+      "max_drawdown_pct": 1.1084273347940932,
+      "win_rate_pct": 56.875,
+      "payoff_ratio": 1.7627238035202026,
+      "trades": 160
+    },
+    {
+      "symbol": "SOL-USDT",
+      "data_source": "okx",
+      "variant": "baseline_test",
+      "entry_signals": 653,
+      "return_pct": -13.814273437499999,
+      "return_ann_pct": -2.6661515187063833,
+      "cagr_pct": -2.6671206548573245,
+      "sharpe": -1.0398099886869554,
+      "sortino": -1.4997766779596906,
+      "calmar": -0.16551502220174583,
+      "max_drawdown_pct": 16.108214730241333,
+      "win_rate_pct": 32.31083844580777,
+      "payoff_ratio": 1.600000023841858,
+      "trades": 489
+    },
+    {
+      "symbol": "SOL-USDT",
+      "data_source": "okx",
+      "variant": "qlib_filtered_test",
+      "entry_signals": 478,
+      "return_pct": 19.5571640625,
+      "return_ann_pct": 3.300195470269629,
+      "cagr_pct": 3.301431295765167,
+      "sharpe": 1.4763613011680916,
+      "sortino": 3.400904178918097,
+      "calmar": 1.1133975742980213,
+      "max_drawdown_pct": 2.9640763968345696,
+      "win_rate_pct": 50.13850415512465,
+      "payoff_ratio": 1.6936194896697998,
+      "trades": 361
+    }
+  ],
+  "artifacts": {
+    "qlib_dataset": "G:\\qlib-ai-trade\\bridge\\runtime\\qlib\\multicycle_dataset.parquet",
+    "predictions": "G:\\qlib-ai-trade\\bridge\\runtime\\qlib\\multicycle_predictions.parquet",
+    "enhanced_signals": "G:\\qlib-ai-trade\\bridge\\runtime\\qlib\\enhanced_signal_frames.parquet",
+    "model": "G:\\qlib-ai-trade\\bridge\\runtime\\models\\multicycle_lgb_model.txt",
+    "freqtrade_signals": "G:\\qlib-ai-trade\\bridge\\runtime\\freqtrade_signals.parquet",
+    "recorder_id": "f93565b343d44aae982f4b3b9002d325"
+  }
+}

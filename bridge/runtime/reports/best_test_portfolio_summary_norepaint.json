@@ -1,0 +1,58 @@
+{
+  "generated_at": "2026-03-30T17:57:24.482582+00:00",
+  "source_search_summary": "G:\\qlib-ai-trade\\bridge\\runtime\\reports\\live_strategy_search_summary.json",
+  "source_training_summary": "G:\\qlib-ai-trade\\bridge\\runtime\\reports\\qlib_training_summary.json",
+  "best_params": {
+    "entry_quantile": 0.45,
+    "exit_quantile": 0.45,
+    "confidence_threshold": 0.3,
+    "exit_confidence_threshold": 0.5,
+    "min_confirmation_count": 1,
+    "enable_range_reversion": true,
+    "qlib_rank_threshold": 0.45,
+    "qlib_exit_rank_threshold": 0.35,
+    "confidence_weight": 0.4,
+    "stop_loss_scale": 0.75,
+    "take_profit_scale": 1.0,
+    "kelly_scale": 0.6,
+    "max_leverage": 6.0,
+    "initial_entry_fraction": 0.35,
+    "layer_stake_fraction": 0.3,
+    "max_entry_layers": 1,
+    "reduce_stake_fraction": 0.55,
+    "partial_take_profit_scale": 0.55,
+    "rotation_top_n": 3,
+    "rotation_min_score": 0.75,
+    "range_entry_zone": 0.2,
+    "range_exit_zone": 0.6,
+    "range_qlib_rank_threshold": 0.55,
+    "range_position_scale": 0.9,
+    "range_leverage_cap": 4.0,
+    "range_profit_capture": 0.95
+  },
+  "portfolio_summary": {
+    "return_pct": 9941684.81334387,
+    "return_ann_pct": 455.1654799030571,
+    "cagr_pct": 455.1654799030571,
+    "sharpe": 4.354164606092608,
+    "sortino": 0.9962853398302516,
+    "calmar": 23.222421741845768,
+    "max_drawdown_pct": 19.600258963640695,
+    "win_rate_pct": 53.96678966789668,
+    "payoff_ratio": 1.9517509587879236,
+    "trades": 3252
+  },
+  "symbols": [
+    "BTC-USDT",
+    "ETH-USDT",
+    "DOGE-USDT",
+    "PEPE-USDT",
+    "SUI-USDT",
+    "SOL-USDT"
+  ],
+  "artifacts": {
+    "equity_csv": "G:\\qlib-ai-trade\\bridge\\runtime\\reports\\best_test_portfolio_equity_norepaint.csv",
+    "trades_csv": "G:\\qlib-ai-trade\\bridge\\runtime\\reports\\best_test_portfolio_trades_norepaint.csv",
+    "equity_png": "G:\\qlib-ai-trade\\bridge\\runtime\\reports\\best_test_portfolio_equity_curve_norepaint.png"
+  }
+}
