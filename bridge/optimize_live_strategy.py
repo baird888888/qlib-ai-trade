@@ -17,6 +17,7 @@ if str(PROJECT_ROOT) not in sys.path:
 from quant_trading.backtest.engine import run_backtest, run_portfolio_backtest
 from quant_trading.config import BacktestConfig, RiskConfig
 from quant_trading.signals.multi_timeframe import apply_practical_signal_overrides, apply_rotation_overlay
+from bridge.rank_utils import reference_scores_with_fallback, score_percentiles
 
 RUNTIME_ROOT = PROJECT_ROOT / "bridge" / "runtime"
 FEATURE_DIR = RUNTIME_ROOT / "features"
@@ -648,7 +649,9 @@ def _build_variant_frames(
     for symbol in symbols:
         full_frame = frames[symbol]
         validation_frame = _slice_frame(full_frame, validation_start, validation_end)
-        target_frame = _slice_frame(full_frame, start, end)
+        target_frame = _slice_frame(full_frame, start, end).copy()
+        reference_scores = reference_scores_with_fallback(validation_frame.get("qlib_score"), fallback_scores)
+        target_frame["qlib_score_rank"] = score_percentiles(target_frame.get("qlib_score"), reference_scores)
         entry_threshold, exit_threshold = _symbol_thresholds(
             validation_frame,
             entry_quantile=params["entry_quantile"],

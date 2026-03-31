@@ -11,6 +11,7 @@ if str(PROJECT_ROOT) not in sys.path:
     sys.path.append(str(PROJECT_ROOT))
 
 from bridge.signal_store import to_external_signal_frame, write_signal_frame
+from bridge.rank_utils import reference_scores_with_fallback, score_percentiles
 from quant_trading.backtest.engine import run_backtest, run_portfolio_backtest
 from quant_trading.config import BacktestConfig, RiskConfig
 from quant_trading.signals.multi_timeframe import apply_practical_signal_overrides, apply_rotation_overlay
@@ -109,9 +110,12 @@ def main() -> None:
         entry_exit_thresholds, threshold_source = _thresholds_from_validation(validation_frame, fallback_scores)
         entry_threshold, exit_threshold = entry_exit_thresholds
         threshold_sources[symbol] = threshold_source
+        local_reference_scores = reference_scores_with_fallback(validation_frame.get("qlib_score"), fallback_scores)
+        prepared_frame = frame.copy()
+        prepared_frame["qlib_score_rank"] = score_percentiles(prepared_frame.get("qlib_score"), local_reference_scores)
 
         live_ready_frame = apply_practical_signal_overrides(
-            frame,
+            prepared_frame,
             entry_threshold=entry_threshold,
             exit_threshold=exit_threshold,
             confidence_threshold=LIVE_READY_PROFILE["confidence_threshold"],

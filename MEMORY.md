@@ -218,3 +218,54 @@
   - the control layer successfully prepared signals, started a Freqtrade process, queried `/api/v1/count`, `/api/v1/profit`, `/api/v1/status`, and stopped the process
 - note:
   - one start attempt failed because the machine temporarily could not resolve `www.okx.com` DNS; this is an environment/network issue, not a strategy code issue
+
+### Anti-Repaint Audit
+
+- found a concrete lookahead leak in `bridge/train_qlib_model.py`:
+  - `qlib_score_rank` had been computed with a full-history per-symbol percentile rank
+  - that rank then fed the practical strategy gating, leverage, rotation, and confidence logic
+- fixed the leak by introducing calibration-only percentile mapping in:
+  - `bridge/rank_utils.py`
+  - `bridge/optimize_live_strategy.py`
+  - `bridge/train_qlib_model.py`
+  - `bridge/export_live_ready_signals.py`
+- re-evaluated the current six-symbol best params with the corrected anti-lookahead logic:
+  - holdout return moved from `+219.05%` down to `+207.88%`
+  - holdout max drawdown moved from `11.61%` up to `13.33%`
+  - full test return moved from `+12736293.38%` down to `+6340091.27%`
+- conclusion:
+  - the old result was overstated by a real future-information leak
+  - even after the fix, the same parameter set still remains extremely aggressive and unusually strong
+  - the next honest step is a full re-search under the corrected ranking logic, not trusting the old search leaderboard as-is
+
+### Post-Fix Re-Search
+
+- ran a post-fix six-symbol local search under the corrected anti-lookahead ranking logic:
+  - command: `.venv\Scripts\python.exe bridge\optimize_live_strategy.py --max-trials 6 --seed 131 --refine-around-current-best --anchor-summary bridge\runtime\reports\live_strategy_search_summary.json --local-radius 2`
+- this validation-first search found a more conservative leader:
+  - holdout return `+128.55%`
+  - holdout annualized return `+128.68%`
+  - holdout max drawdown `8.34%`
+  - holdout weekly positive ratio `52.83%`
+  - holdout monthly positive ratio `58.33%`
+- because the user explicitly prioritized yield, restored the higher-yield post-fix candidate using:
+  - `bridge/runtime/reports/post_fix_high_yield_anchor.json`
+  - `.venv\Scripts\python.exe bridge\optimize_live_strategy.py --max-trials 1 --seed 1 --refine-around-current-best --anchor-params-file bridge\runtime\reports\post_fix_high_yield_anchor.json --local-radius 0`
+- current main post-fix yield leader:
+  - holdout return `+207.88%`
+  - holdout annualized return `+208.12%`
+  - holdout max drawdown `13.33%`
+  - holdout weekly positive ratio `47.17%`
+  - holdout monthly positive ratio `66.67%`
+  - full test return `+6340091.27%`
+  - full test annualized return `+419.18%`
+  - full test max drawdown `19.73%`
+- archived summaries:
+  - `bridge/runtime/reports/post_fix_validation_search_summary.json`
+  - `bridge/runtime/reports/post_fix_validation_search_trials.csv`
+  - `bridge/runtime/reports/post_fix_high_yield_search_summary.json`
+  - `bridge/runtime/reports/post_fix_high_yield_search_trials.csv`
+- refreshed downstream artifacts after restoring the yield leader:
+  - `bridge/runtime/reports/best_test_portfolio_summary_norepaint.json`
+  - `bridge/runtime/live_console/prepared_strategy_profile.json`
+  - `bridge/runtime/live_console/prepared_strategy_equity_curve.png`

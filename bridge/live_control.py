@@ -36,6 +36,7 @@ GENERATED_EQUITY_CSV_PATH = LIVE_ROOT / "prepared_strategy_equity.csv"
 GENERATED_EQUITY_PNG_PATH = LIVE_ROOT / "prepared_strategy_equity_curve.png"
 GENERATED_LOG_PATH = LIVE_ROOT / "freqtrade_live.log"
 GENERATED_DB_PATH = LIVE_ROOT / "tradesv3.live.sqlite"
+LIVE_METRICS_HISTORY_PATH = LIVE_ROOT / "live_metrics_history.csv"
 
 
 def _ensure_live_root() -> None:
@@ -142,6 +143,73 @@ def save_state(state: dict[str, Any]) -> Path:
     return STATE_PATH
 
 
+def _load_live_metrics_history(limit: int = 240) -> list[dict[str, Any]]:
+    if not LIVE_METRICS_HISTORY_PATH.exists():
+        return []
+    frame = pd.read_csv(LIVE_METRICS_HISTORY_PATH)
+    if frame.empty:
+        return []
+    frame["timestamp"] = pd.to_datetime(frame["timestamp"], utc=True)
+    frame = frame.sort_values("timestamp").tail(limit).reset_index(drop=True)
+    frame["timestamp"] = frame["timestamp"].dt.strftime("%Y-%m-%dT%H:%M:%S%z").str.replace(
+        r"(\+0000)$", "+00:00", regex=True
+    )
+    return frame.to_dict(orient="records")
+
+
+def _extract_live_metrics(live_api: dict[str, Any], state: dict[str, Any]) -> dict[str, Any] | None:
+    if not live_api:
+        return None
+    profit = live_api.get("profit", {})
+    count = live_api.get("count", {})
+    status = live_api.get("status", [])
+    if not isinstance(profit, dict) or "error" in profit:
+        return None
+    if not isinstance(count, dict) or "error" in count:
+        return None
+
+    return {
+        "timestamp": _utc_now_iso(),
+        "pid": int(state.get("pid") or 0),
+        "running": bool(state.get("running", False)),
+        "open_trades": int(count.get("current", 0) or 0),
+        "closed_trades": int(count.get("total", 0) or 0),
+        "max_open_trades": int(count.get("max_open_trades", 0) or 0),
+        "profit_closed_coin": float(profit.get("profit_closed_coin", 0.0) or 0.0),
+        "profit_closed_percent": float(profit.get("profit_closed_percent", 0.0) or 0.0),
+        "profit_all_coin": float(profit.get("profit_all_coin", 0.0) or 0.0),
+        "profit_all_percent": float(profit.get("profit_all_percent", 0.0) or 0.0),
+        "trade_count": int(profit.get("trade_count", 0) or 0),
+        "closed_trade_count": int(profit.get("closed_trade_count", 0) or 0),
+        "winrate": float(profit.get("winrate", 0.0) or 0.0) * 100.0,
+        "profit_factor": float(profit.get("profit_factor", 0.0) or 0.0),
+        "max_drawdown_percent": float(profit.get("max_drawdown", 0.0) or 0.0) * 100.0,
+        "status_rows": len(status) if isinstance(status, list) else 0,
+    }
+
+
+def _append_live_metric_snapshot(snapshot: dict[str, Any] | None) -> None:
+    if snapshot is None:
+        return
+    _ensure_live_root()
+    frame = pd.DataFrame([snapshot])
+    if LIVE_METRICS_HISTORY_PATH.exists():
+        history = pd.read_csv(LIVE_METRICS_HISTORY_PATH)
+        if not history.empty:
+            history["timestamp"] = pd.to_datetime(history["timestamp"], utc=True)
+            last = history.sort_values("timestamp").iloc[-1]
+            last_ts = pd.Timestamp(last["timestamp"], tz="UTC") if not isinstance(last["timestamp"], pd.Timestamp) else last["timestamp"]
+            current_ts = pd.to_datetime(snapshot["timestamp"], utc=True)
+            if abs((current_ts - last_ts).total_seconds()) < 10:
+                history = history.iloc[:-1]
+            history = pd.concat([history, frame], ignore_index=True)
+        else:
+            history = frame
+    else:
+        history = frame
+    history.to_csv(LIVE_METRICS_HISTORY_PATH, index=False)
+
+
 def list_strategy_profiles() -> list[dict[str, Any]]:
     profiles: list[dict[str, Any]] = []
     for path in sorted(REPORT_DIR.glob("*search_summary.json")):
@@ -153,15 +221,21 @@ def list_strategy_profiles() -> list[dict[str, Any]]:
         best_holdout = payload.get("best_holdout", {})
         holdout_portfolio = best_holdout.get("portfolio", {})
         holdout_stability = best_holdout.get("stability", {})
+        best_test = payload.get("best_test", {})
+        best_test_portfolio = best_test.get("portfolio", {})
         profiles.append(
             {
                 "id": path.name,
                 "name": path.stem,
                 "path": str(path.resolve()),
                 "holdout_return_pct": float(holdout_portfolio.get("return_pct", 0.0) or 0.0),
+                "holdout_ann_pct": float(holdout_portfolio.get("return_ann_pct", 0.0) or 0.0),
                 "holdout_drawdown_pct": float(holdout_portfolio.get("max_drawdown_pct", 0.0) or 0.0),
                 "holdout_weekly_positive_ratio": float(holdout_stability.get("weekly_positive_ratio", 0.0) or 0.0),
                 "holdout_monthly_positive_ratio": float(holdout_stability.get("monthly_positive_ratio", 0.0) or 0.0),
+                "best_test_return_pct": float(best_test_portfolio.get("return_pct", 0.0) or 0.0),
+                "best_test_ann_pct": float(best_test_portfolio.get("return_ann_pct", 0.0) or 0.0),
+                "best_test_drawdown_pct": float(best_test_portfolio.get("max_drawdown_pct", 0.0) or 0.0),
                 "enable_range_reversion": bool(best_params.get("enable_range_reversion", False)) if isinstance(best_params, dict) else False,
                 "symbols": list(payload.get("symbols", [])),
                 "updated_at": datetime.fromtimestamp(path.stat().st_mtime, tz=timezone.utc).isoformat(),
@@ -494,12 +568,18 @@ def live_snapshot() -> dict[str, Any]:
     if GENERATED_PROFILE_PATH.exists():
         prepared_profile = json.loads(GENERATED_PROFILE_PATH.read_text(encoding="utf-8"))
 
+    live_api = query_live_api()
+    live_metric = _extract_live_metrics(live_api, state)
+    _append_live_metric_snapshot(live_metric)
+
     return {
         "settings": settings,
         "state": state,
         "profiles": list_strategy_profiles(),
         "prepared_profile": prepared_profile,
-        "live_api": query_live_api(),
+        "live_api": live_api,
+        "live_metric": live_metric,
+        "live_metrics_history": _load_live_metrics_history(),
         "log_tail": tail_log(),
         "artifacts": {
             "config": str(GENERATED_CONFIG_PATH.resolve()) if GENERATED_CONFIG_PATH.exists() else None,
@@ -507,5 +587,6 @@ def live_snapshot() -> dict[str, Any]:
             "equity_csv": str(GENERATED_EQUITY_CSV_PATH.resolve()) if GENERATED_EQUITY_CSV_PATH.exists() else None,
             "equity_png": str(GENERATED_EQUITY_PNG_PATH.resolve()) if GENERATED_EQUITY_PNG_PATH.exists() else None,
             "log": str(GENERATED_LOG_PATH.resolve()),
+            "live_metrics_history": str(LIVE_METRICS_HISTORY_PATH.resolve()),
         },
     }

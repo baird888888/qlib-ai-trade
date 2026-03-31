@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-30T17:57:24.482582+00:00",
+  "generated_at": "2026-03-31T04:35:11.939520+00:00",
   "source_search_summary": "G:\\qlib-ai-trade\\bridge\\runtime\\reports\\live_strategy_search_summary.json",
   "source_training_summary": "G:\\qlib-ai-trade\\bridge\\runtime\\reports\\qlib_training_summary.json",
   "best_params": {
@@ -31,16 +31,16 @@
     "range_profit_capture": 0.95
   },
   "portfolio_summary": {
-    "return_pct": 9941684.81334387,
-    "return_ann_pct": 455.1654799030571,
-    "cagr_pct": 455.1654799030571,
-    "sharpe": 4.354164606092608,
-    "sortino": 0.9962853398302516,
-    "calmar": 23.222421741845768,
-    "max_drawdown_pct": 19.600258963640695,
-    "win_rate_pct": 53.96678966789668,
-    "payoff_ratio": 1.9517509587879236,
-    "trades": 3252
+    "return_pct": 9949250.480487613,
+    "return_ann_pct": 455.228392048312,
+    "cagr_pct": 455.228392048312,
+    "sharpe": 4.052883450015845,
+    "sortino": 1.0318166225053185,
+    "calmar": 20.054787088166016,
+    "max_drawdown_pct": 22.69923834379346,
+    "win_rate_pct": 51.037527593818986,
+    "payoff_ratio": 1.8855291479937084,
+    "trades": 4530
   },
   "symbols": [
     "BTC-USDT",

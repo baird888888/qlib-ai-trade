@@ -16,6 +16,7 @@ if str(PROJECT_ROOT) not in sys.path:
     sys.path.append(str(PROJECT_ROOT))
 
 from bridge.signal_store import to_external_signal_frame, write_signal_frame
+from bridge.rank_utils import reference_scores_with_fallback, score_percentiles
 from quant_trading.backtest.engine import run_backtest
 from quant_trading.config import DEFAULT_PARAMETER_NOTES, ResearchConfig
 from quant_trading.data import FreqtradeHistoryLoader, MarketDataSourceConfig, OKXDataFetcher, load_market_frames
@@ -646,9 +647,6 @@ def main() -> None:
 
     prediction_frame = _prediction_series_to_frame(model.predict(inference_dataset, segment="all"), segment="all")
     prediction_frame = _annotate_prediction_segments(prediction_frame, segments)
-    prediction_frame["qlib_score_rank"] = (
-        prediction_frame.groupby("symbol")["qlib_score"].rank(method="average", pct=True).fillna(0.5)
-    )
     _save_frame(prediction_frame, qlib_dir / "multicycle_predictions.parquet")
 
     entry_threshold = (
@@ -668,6 +666,7 @@ def main() -> None:
         "valid": _evaluate_predictions(label_series=label_series, predictions=valid_predictions),
         "test": _evaluate_predictions(label_series=label_series, predictions=test_predictions),
     }
+    global_valid_scores = _prediction_series_to_frame(valid_predictions, segment="valid")["qlib_score"]
 
     backtest_rows: list[dict] = []
     external_frames: list[pd.DataFrame] = []
@@ -677,10 +676,15 @@ def main() -> None:
 
     for symbol, signal_frame in symbol_frames.items():
         symbol_prediction_frame = prediction_frame.loc[prediction_frame["symbol"] == symbol].copy()
+        symbol_valid_scores = symbol_prediction_frame.loc[symbol_prediction_frame["segment"] == "valid", "qlib_score"]
         merged = signal_frame.merge(
-            symbol_prediction_frame[["timestamp", "qlib_score", "qlib_score_rank"]],
+            symbol_prediction_frame[["timestamp", "qlib_score"]],
             on="timestamp",
             how="left",
+        )
+        merged["qlib_score_rank"] = score_percentiles(
+            merged.get("qlib_score"),
+            reference_scores_with_fallback(symbol_valid_scores, global_valid_scores),
         )
         filtered = apply_qlib_score_filter(
             merged,
