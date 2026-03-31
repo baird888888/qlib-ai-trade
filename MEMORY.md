@@ -269,3 +269,27 @@
   - `bridge/runtime/reports/best_test_portfolio_summary_norepaint.json`
   - `bridge/runtime/live_console/prepared_strategy_profile.json`
   - `bridge/runtime/live_console/prepared_strategy_equity_curve.png`
+
+### Post-Fix Yield Push
+
+- continued optimizing after the anti-lookahead fix with:
+  - `.venv\Scripts\python.exe bridge\optimize_live_strategy.py --max-trials 6 --seed 131 --refine-around-current-best --anchor-summary bridge\runtime\reports\live_strategy_search_summary.json --local-radius 2`
+- that search found a more stable but lower-yield validation leader:
+  - holdout return `+128.55%`
+  - holdout annualized return `+128.68%`
+  - holdout max drawdown `8.34%`
+  - holdout weekly positive ratio `52.83%`
+  - holdout monthly positive ratio `58.33%`
+- because the user explicitly prioritized yield, restored the higher-yield post-fix candidate again:
+  - holdout return `+207.88%`
+  - holdout annualized return `+208.12%`
+  - holdout max drawdown `13.33%`
+  - holdout weekly positive ratio `47.17%`
+  - holdout monthly positive ratio `66.67%`
+  - full test return `+6340091.27%`
+  - full test annualized return `+419.18%`
+  - full test max drawdown `19.73%`
+- refreshed exports and web-facing prepared profile after restoring the yield leader:
+  - `bridge/runtime/reports/best_test_portfolio_summary_norepaint.json`
+  - `bridge/runtime/live_console/prepared_strategy_profile.json`
+  - `bridge/runtime/live_console/prepared_strategy_equity_curve.png`
